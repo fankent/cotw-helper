@@ -61,11 +61,13 @@
       /* 搜索框 */
       .search-input { @apply w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all; }
       
-      /* 瀑布流 */
-      .masonry-grid { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4; }
+      /* 瀑布流 - 核心修改 */
+      .masonry-container { @apply relative; }
+      .masonry-columns { @apply columns-1 md:columns-2 lg:columns-3 gap-4; }
+      .masonry-item { @apply break-inside-avoid mb-4; }
       
       /* 骨架屏 */
-      .skeleton-card { @apply bg-white rounded-xl p-5 shadow-skeleton animate-pulse; }
+      .skeleton-card { @apply bg-white rounded-xl p-5 shadow-skeleton animate-pulse w-full; }
       .skeleton-text { @apply bg-gray-100 rounded h-6 mb-2; }
       .skeleton-text-lg { @apply bg-gray-100 rounded h-8 mb-3; }
       .skeleton-tag { @apply bg-gray-100 rounded-full h-7 w-24 mr-2; }
@@ -105,9 +107,11 @@
             <span>数据加载失败，请刷新重试</span>
         </div>
 
-        <!-- 动物列表瀑布流容器 -->
-        <div id="animalList" class="masonry-grid mb-6">
-            <!-- 动态渲染区域 -->
+        <!-- 动物列表瀑布流容器 - 核心修改 -->
+        <div id="animalList" class="masonry-container">
+            <div class="masonry-columns">
+                <!-- 动态渲染区域 -->
+            </div>
         </div>
 
         <!-- 分页控件 -->
@@ -196,35 +200,37 @@
 
         // 渲染骨架屏
         const renderSkeleton = (count = 9) => {
-            const container = document.getElementById('animalList')
+            const container = document.querySelector('.masonry-columns')
             let skeletonHTML = ''
 
             for (let i = 0; i < count; i++) {
                 skeletonHTML += `
-          <div class="skeleton-card">
-            <div class="skeleton-text-lg w-1/2 mb-4"></div>
-            <div class="skeleton-text w-full mb-2"></div>
-            <div class="skeleton-text w-full mb-2"></div>
-            <div class="skeleton-text w-full mb-6"></div>
-            <div class="flex flex-wrap mb-4">
-              <div class="skeleton-tag"></div>
-              <div class="skeleton-tag"></div>
-              <div class="skeleton-tag"></div>
-            </div>
-            <div class="flex flex-wrap mb-4">
-              <div class="skeleton-precious"></div>
-              <div class="skeleton-precious"></div>
-            </div>
-            <div class="mb-4">
-              <div class="skeleton-text w-1/4 mb-3"></div>
-              <div class="skeleton-map"></div>
-              <div class="skeleton-map"></div>
-              <div class="skeleton-map"></div>
-            </div>
-            <div>
-              <div class="skeleton-text w-1/4 mb-3"></div>
-              <div class="skeleton-tag"></div>
-              <div class="skeleton-tag"></div>
+          <div class="masonry-item">
+            <div class="skeleton-card">
+              <div class="skeleton-text-lg w-1/2 mb-4"></div>
+              <div class="skeleton-text w-full mb-2"></div>
+              <div class="skeleton-text w-full mb-2"></div>
+              <div class="skeleton-text w-full mb-6"></div>
+              <div class="flex flex-wrap mb-4">
+                <div class="skeleton-tag"></div>
+                <div class="skeleton-tag"></div>
+                <div class="skeleton-tag"></div>
+              </div>
+              <div class="flex flex-wrap mb-4">
+                <div class="skeleton-precious"></div>
+                <div class="skeleton-precious"></div>
+              </div>
+              <div class="mb-4">
+                <div class="skeleton-text w-1/4 mb-3"></div>
+                <div class="skeleton-map"></div>
+                <div class="skeleton-map"></div>
+                <div class="skeleton-map"></div>
+              </div>
+              <div>
+                <div class="skeleton-text w-1/4 mb-3"></div>
+                <div class="skeleton-tag"></div>
+                <div class="skeleton-tag"></div>
+              </div>
             </div>
           </div>
         `
@@ -235,7 +241,7 @@
 
         // 渲染动物卡片
         const renderAnimalCards = () => {
-            const container = document.getElementById('animalList')
+            const container = document.querySelector('.masonry-columns')
             container.innerHTML = ''
 
             // 计算分页数据
@@ -307,56 +313,58 @@
           `
                 }
 
-                // 完整卡片HTML
+                // 完整卡片HTML - 增加了masonry-item容器
                 const cardHTML = `
-          <div class="card-base">
-            <div class="info-row pb-4 border-b border-gray-100">
-              <div>
-                <p class="name-xl">${animal.name || '未知动物'}</p>
-                <p class="text-secondary italic mt-1">${animal.englishName || 'Unknown'}</p>
+          <div class="masonry-item">
+            <div class="card-base">
+              <div class="info-row pb-4 border-b border-gray-100">
+                <div>
+                  <p class="name-xl">${animal.name || '未知动物'}</p>
+                  <p class="text-secondary italic mt-1">${animal.englishName || 'Unknown'}</p>
+                </div>
+                <div class="flex items-center self-end mb-1">
+                  <p class="text-secondary text-xs mr-1">等级</p>
+                  <span class="level-badge">${animal.level || 0}</span>
+                </div>
               </div>
-              <div class="flex items-center self-end mb-1">
-                <p class="text-secondary text-xs mr-1">等级</p>
-                <span class="level-badge">${animal.level || 0}</span>
+              <div class="info-row">
+                <p class="info-label">最高难度</p>
+                <p class="content-large">${animal.difficulty || '未知'}</p>
               </div>
-            </div>
-            <div class="info-row">
-              <p class="info-label">最高难度</p>
-              <p class="content-large">${animal.difficulty || '未知'}</p>
-            </div>
-            <div class="info-row">
-              <p class="info-label">饮水时间</p>
-              <p class="content-large">${animal.drinkTime || '未知'}</p>
-            </div>
-            <div class="info-row">
-              <p class="info-label">钻石评分线</p>
-              <p class="content-large">${animal.diamondScore || 0}</p>
-            </div>
-            
-            <!-- 毛色类型模块 -->
-            <div class="mt-6 mb-2">
-              <p class="text-secondary text-sm mb-3">毛色类型</p>
-              <div class="flex flex-wrap gap-2.5">
-                ${commonFurTags}
-                ${rareFurTags}
+              <div class="info-row">
+                <p class="info-label">饮水时间</p>
+                <p class="content-large">${animal.drinkTime || '未知'}</p>
               </div>
-            </div>
-            
-            <!-- 珍禽毛色模块 -->
-            ${preciousFurModuleHTML}
+              <div class="info-row">
+                <p class="info-label">钻石评分线</p>
+                <p class="content-large">${animal.diamondScore || 0}</p>
+              </div>
+              
+              <!-- 毛色类型模块 -->
+              <div class="mt-6 mb-2">
+                <p class="text-secondary text-sm mb-3">毛色类型</p>
+                <div class="flex flex-wrap gap-2.5">
+                  ${commonFurTags}
+                  ${rareFurTags}
+                </div>
+              </div>
+              
+              <!-- 珍禽毛色模块 -->
+              ${preciousFurModuleHTML}
 
-            <div class="module-divider"></div>
-            
-            <!-- 可狩猎地图模块 -->
-            <div class="mb-4">
-              <p class="text-secondary text-sm mb-3">可狩猎地图</p>
-              <div class="w-full">
-                ${mapList}
+              <div class="module-divider"></div>
+              
+              <!-- 可狩猎地图模块 -->
+              <div class="mb-4">
+                <p class="text-secondary text-sm mb-3">可狩猎地图</p>
+                <div class="w-full">
+                  ${mapList}
+                </div>
               </div>
+              
+              <!-- 引诱工具模块 -->
+              ${lureModuleHTML}
             </div>
-            
-            <!-- 引诱工具模块 -->
-            ${lureModuleHTML}
           </div>
         `
 
@@ -506,9 +514,9 @@
         }
         const hidePagination = () => showPagination(false)
 
-        // 页面初始化
-        const initPage = async () => {
-            // 初始加载数据
+        // 初始化
+        const init = async () => {
+            renderSkeleton()
             await fetchAnimalData()
             renderAnimalCards()
             initSearch()
@@ -516,8 +524,8 @@
             initBackToTop()
         }
 
-        // 启动页面
-        initPage();
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', init)
     </script>
 </body>
 
