@@ -3,60 +3,15 @@
         "name": "黑额黑雁",
         "englishName": "Canada Goose",
         "level": 1,
-        "difficulty": "5-中等",
-        "drinkTime": "10:00 - 12:00",
+        "difficulty": "5 - 中等",
+        "drinkTime": "-",
         "diamondScore": 8.59,
         "furTypes": {
             "common": [ "棕色混种", "灰褐色" ],
             "rare": [ "灰色", "无毛亚种", "浅灰色亚种", "黑化" ],
-            "precious": [ "白金亚种", "彩虹羽毛" ]
+            "precious": [ ]
         },
         "maps": [ "赫希费尔登狩猎保护区", "育空河谷自然保护区", "雷文图里海岸", "阿斯基岭狩猎保护区" ],
         "lures": [ "黑额黑雁诱捕道具", "黑额黑雁仿生哨" ]
-    },
-    {
-        "name": "白尾鹿",
-        "englishName": "White-tailed Deer",
-        "level": 2,
-        "difficulty": "4-简单",
-        "drinkTime": "08:00 - 10:00",
-        "diamondScore": 7.85,
-        "furTypes": {
-            "common": [ "红棕色", "浅棕色" ],
-            "rare": [ "白化", "黑化", "斑纹亚种" ],
-            "precious": [ ]
-        },
-        "maps": [ "赫希费尔登狩猎保护区", "莱顿湖区", "特兰西瓦尼亚" ],
-        "lures": [ ]
-    },
-    {
-        "name": "棕熊",
-        "englishName": "Brown Bear",
-        "level": 5,
-        "difficulty": "9-困难",
-        "drinkTime": "14:00 - 16:00",
-        "diamondScore": 9.23,
-        "furTypes": {
-            "common": [ "深棕色", "红棕色" ],
-            "rare": [ "金棕色", "白化亚种", "冰川亚种" ],
-            "precious": [ "星斑皮毛", "雪晶纹理" ]
-        },
-        "maps": [ "育空河谷自然保护区", "科迪亚克岛", "阿斯基岭狩猎保护区" ],
-        "lures": [ "熊类专用诱饵", "鱼类诱饵" ]
-    },
-    {
-        "name": "野火鸡",
-        "englishName": "Wild Turkey",
-        "level": 1,
-        "difficulty": "3-简单",
-        "drinkTime": "07:00 - 09:00",
-        "diamondScore": 6.78,
-        "furTypes": {
-            "common": [ "青铜色", "深棕色" ],
-            "rare": [ "白化", "烟灰色", "彩色亚种" ],
-            "precious": null
-        },
-        "maps": [ "赫希费尔登狩猎保护区", "莱顿湖区", "雷文图里海岸" ],
-        "lures": null
     }
 ]
