@@ -84,12 +84,20 @@
       
       /* 珍禽毛色标签样式 */
       .precious-tag { @apply tag-pill bg-natural-precious-bg text-natural-precious-text; }
+      
+      /* 标题样式 */
+      .page-title { @apply text-[clamp(2rem,5vw,3.5rem)] font-bold text-primary text-center py-4 mb-1 tracking-wider; }
+      .page-subtitle { @apply text-[clamp(1rem,2vw,1.5rem)] text-secondary text-center mb-6 italic; }
     }
   </style>
 </head>
 
 <body class="bg-[#F5F9F7] min-h-screen py-6 px-4">
     <div class="max-w-6xl mx-auto">
+        <!-- 新增顶部标题区域 -->
+        <h1 class="page-title">《猎人：荒野的召唤》</h1>
+        <p class="page-subtitle">theHunter: Call of the Wild</p>
+
         <!-- 搜索框区域 -->
         <div class="mb-6">
             <input type="text" id="animalSearch" class="search-input" placeholder="输入动物名称搜索...">
