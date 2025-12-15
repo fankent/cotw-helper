@@ -9,8 +9,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 引入Font Awesome -->
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- 引入html2canvas（核心截图插件） -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <!-- 自定义配置 -->
     <script>
@@ -46,7 +44,7 @@
     <style type="text/tailwindcss">
         @layer utilities {
       /* 基础样式 */
-      .card-base { @apply bg-white rounded-xl p-5 shadow-card transition-all duration-300 hover:shadow-hover hover:-translate-y-1 relative; }
+      .card-base { @apply bg-white rounded-xl p-5 shadow-card transition-all duration-300 hover:shadow-hover hover:-translate-y-1; }
       .tag-pill { @apply rounded-full px-3 py-1.5 text-sm font-medium; }
       .level-badge { @apply rounded-full px-2 py-0.5 text-xs font-semibold bg-natural-level-bg text-natural-level-text; }
       .content-large { @apply text-2xl font-bold text-primary; }
@@ -84,19 +82,6 @@
       
       /* 珍禽毛色标签样式 */
       .precious-tag { @apply tag-pill bg-natural-precious-bg text-natural-precious-text; }
-      
-      /* 截图下载按钮 */
-      .download-btn { 
-        @apply absolute top-4 right-4 w-8 h-8 rounded-full bg-primary/80 text-white flex items-center justify-center 
-        opacity-0 hover:bg-primary transition-all z-10;
-      }
-      .card-base:hover .download-btn { @apply opacity-100; }
-      
-      /* 截图加载遮罩 */
-      .screenshot-mask {
-        @apply absolute inset-0 bg-black/30 rounded-xl flex items-center justify-center z-20 hidden;
-      }
-      .screenshot-mask.show { @apply block; }
     }
   </style>
 </head>
@@ -148,19 +133,18 @@
     </div>
 
     <script>
-        // 全局配置：替换为你的 GitHub 仓库名和用户名
         const CONFIG = {
             JSON_DATA_URL: 'https://fankent.github.io/cotw-helper/animal-data.json'
         }
 
         // 全局状态管理
         const state = {
-            allData: [],
-            filteredData: [],
-            currentPage: 1,
-            pageSize: 9,
-            isLoading: false,
-            searchKeyword: ''
+            allData: [], // 从JSON加载的原始数据
+            filteredData: [], // 筛选后的数据
+            currentPage: 1, // 当前页码
+            pageSize: 9, // 每页显示数量
+            isLoading: false, // 加载状态
+            searchKeyword: '' // 搜索关键词
         }
 
         // 工具函数 - 防抖
@@ -172,19 +156,23 @@
             }
         }
 
-        // 加载JSON数据
+        // 加载JSON数据（核心：从GitHub Pages请求）
         const fetchAnimalData = async (keyword = '') => {
             try {
                 state.isLoading = true
                 showLoading(true)
                 hideError()
 
+                // 从GitHub Pages加载JSON文件
                 const response = await fetch(CONFIG.JSON_DATA_URL)
                 if (!response.ok) throw new Error('网络请求失败')
 
+                // 解析JSON数据
                 const rawData = await response.json()
+                // 为每条数据添加唯一ID（可选，方便后续操作）
                 state.allData = rawData.map((item, index) => ({ ...item, id: index + 1 }))
 
+                // 筛选数据
                 if (keyword) {
                     state.filteredData = state.allData.filter(animal =>
                         animal.name.toLowerCase().includes(keyword.toLowerCase()) ||
@@ -201,7 +189,7 @@
                 console.error('数据加载失败:', error)
                 state.isLoading = false
                 showLoading(false)
-                showError()
+                showError() // 显示错误提示
                 return []
             }
         }
@@ -245,53 +233,17 @@
             container.innerHTML = skeletonHTML
         }
 
-        // 核心：截图下载函数
-        const downloadCardScreenshot = async (cardElement, animalName) => {
-            // 显示加载遮罩
-            const mask = cardElement.querySelector('.screenshot-mask')
-            mask.classList.add('show')
-
-            try {
-                // 配置html2canvas（解决样式、跨域等问题）
-                const canvas = await html2canvas(cardElement, {
-                    useCORS: true, // 允许跨域图片（如果卡片有图片）
-                    scale: 2, // 2倍分辨率，截图更清晰
-                    backgroundColor: '#F5F9F7', // 背景色（匹配页面）
-                    logging: false, // 关闭日志
-                    windowWidth: cardElement.offsetWidth,
-                    windowHeight: cardElement.offsetHeight
-                })
-
-                // 将Canvas转换为Blob并下载
-                canvas.toBlob((blob) => {
-                    const url = URL.createObjectURL(blob)
-                    const a = document.createElement('a')
-                    a.href = url
-                    // 自定义下载文件名
-                    a.download = `${animalName}-动物信息-${new Date().getTime()}.png`
-                    document.body.appendChild(a)
-                    a.click()
-                    // 清理资源
-                    document.body.removeChild(a)
-                    URL.revokeObjectURL(url)
-                    mask.classList.remove('show')
-                }, 'image/png', 1.0) // 1.0 = 无损质量
-            } catch (error) {
-                console.error('截图失败:', error)
-                mask.classList.remove('show')
-                alert('截图下载失败，请重试！')
-            }
-        }
-
-        // 渲染动物卡片（集成截图按钮）
+        // 渲染动物卡片
         const renderAnimalCards = () => {
             const container = document.getElementById('animalList')
             container.innerHTML = ''
 
+            // 计算分页数据
             const start = (state.currentPage - 1) * state.pageSize
             const end = start + state.pageSize
             const paginatedData = state.filteredData.slice(start, end)
 
+            // 空状态
             if (paginatedData.length === 0 && !state.isLoading) {
                 container.innerHTML = `
           <div class="col-span-full text-center py-10 text-secondary">
@@ -355,18 +307,9 @@
           `
                 }
 
-                // 完整卡片HTML（新增截图按钮+加载遮罩）
+                // 完整卡片HTML
                 const cardHTML = `
-          <div class="card-base" id="card-${animal.id}">
-            <!-- 截图下载按钮（悬浮显示） -->
-            <button class="download-btn" data-animal-name="${animal.name}">
-              <i class="fa fa-download"></i>
-            </button>
-            <!-- 截图加载遮罩 -->
-            <div class="screenshot-mask">
-              <i class="fa fa-spinner fa-spin text-white text-2xl"></i>
-            </div>
-            
+          <div class="card-base">
             <div class="info-row pb-4 border-b border-gray-100">
               <div>
                 <p class="name-xl">${animal.name || '未知动物'}</p>
@@ -418,16 +361,6 @@
         `
 
                 container.innerHTML += cardHTML
-            })
-
-            // 绑定截图按钮点击事件
-            document.querySelectorAll('.download-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation() // 阻止触发卡片点击事件
-                    const animalName = btn.getAttribute('data-animal-name')
-                    const cardElement = btn.closest('.card-base')
-                    downloadCardScreenshot(cardElement, animalName)
-                })
             })
 
             bindCardClickEvents()
@@ -575,6 +508,7 @@
 
         // 页面初始化
         const initPage = async () => {
+            // 初始加载数据
             await fetchAnimalData()
             renderAnimalCards()
             initSearch()
