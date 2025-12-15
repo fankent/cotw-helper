@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动物信息展示 - 狩猎图鉴</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- 自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A29',
+                        secondary: '#5C6B60',
+                        natural: {
+                            rare: { bg: '#8B3A3A', text: '#FFFFFF' },
+                            common: { bg: '#E8D9B5', text: '#4A402F' },
+                            tool: { bg: '#7FB8D3', text: '#FFFFFF' },
+                            level: { bg: '#F0F0F0', text: '#4A402F' },
+                            map: { bg: '#A2D729', text: '#2A4716', card: '#FCFEF6', border: '#E8F5D1' },
+                            precious: { bg: '#D97706', text: '#FFFFFF' },
+                            text: { light: '#8A948C', dark: '#3A433D' }
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        card: '0 4px 12px rgba(0, 0, 0, 0.06)',
+                        hover: '0 8px 20px rgba(0, 0, 0, 0.1)',
+                        skeleton: '0 2px 8px rgba(0, 0, 0, 0.04)'
+                    }
+                },
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+      /* 基础样式 */
+      .card-base { @apply bg-white rounded-xl p-5 shadow-card transition-all duration-300 hover:shadow-hover hover:-translate-y-1; }
+      .tag-pill { @apply rounded-full px-3 py-1.5 text-sm font-medium; }
+      .level-badge { @apply rounded-full px-2 py-0.5 text-xs font-semibold bg-natural-level-bg text-natural-level-text; }
+      .content-large { @apply text-2xl font-bold text-primary; }
+      .name-xl { @apply text-3xl font-bold text-primary; }
+      .info-row { @apply flex justify-between items-center py-2 border-b border-gray-100 last:border-0; }
+      .info-label { @apply text-secondary text-sm; }
+      .module-divider { @apply my-4 border-b border-gray-100; }
+      
+      /* 地图列表 */
+      .map-list-item { @apply bg-natural-map-card border border-natural-map-border rounded-lg p-2.5 flex items-center transition-all hover:bg-natural-map-bg/30 w-full mb-1.5 last:mb-0; }
+      .map-icon { @apply text-natural-map-text mr-2 text-base flex-shrink-0; }
+      .map-text { @apply text-natural-text-dark text-sm font-medium leading-tight; }
+      
+      /* 搜索框 */
+      .search-input { @apply w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all; }
+      
+      /* 瀑布流 */
+      .masonry-grid { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4; }
+      
+      /* 骨架屏 */
+      .skeleton-card { @apply bg-white rounded-xl p-5 shadow-skeleton animate-pulse; }
+      .skeleton-text { @apply bg-gray-100 rounded h-6 mb-2; }
+      .skeleton-text-lg { @apply bg-gray-100 rounded h-8 mb-3; }
+      .skeleton-tag { @apply bg-gray-100 rounded-full h-7 w-24 mr-2; }
+      .skeleton-map { @apply bg-gray-100 rounded-lg h-10 w-full mb-2; }
+      .skeleton-precious { @apply bg-gray-100 rounded-full h-7 w-20 mr-2; }
+      
+      /* 分页控件 */
+      .pagination-btn { @apply px-3 py-1.5 rounded border border-gray-200 bg-white hover:bg-primary/5 text-secondary transition-all; }
+      .pagination-btn-active { @apply bg-primary text-white border-primary; }
+      
+      /* 返回顶部 */
+      .back-to-top { @apply fixed bottom-6 right-6 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg transition-all opacity-0 invisible hover:bg-primary/90; }
+      .back-to-top.show { @apply opacity-100 visible; }
+      
+      /* 珍禽毛色标签样式 */
+      .precious-tag { @apply tag-pill bg-natural-precious-bg text-natural-precious-text; }
+    }
+  </style>
+</head>
+
+<body class="bg-[#F5F9F7] min-h-screen py-6 px-4">
+    <div class="max-w-6xl mx-auto">
+        <!-- 搜索框区域 -->
+        <div class="mb-6">
+            <input type="text" id="animalSearch" class="search-input" placeholder="输入动物名称搜索...">
+        </div>
+
+        <!-- 加载状态提示 -->
+        <div id="loadingTip" class="col-span-full text-center py-6 text-secondary hidden">
+            <i class="fa fa-spinner fa-spin mr-2"></i>
+            <span>加载中...</span>
+        </div>
+
+        <!-- 错误提示 -->
+        <div id="errorTip" class="col-span-full text-center py-6 text-red-500 hidden">
+            <i class="fa fa-exclamation-circle mr-2"></i>
+            <span>数据加载失败，请刷新重试</span>
+        </div>
+
+        <!-- 动物列表瀑布流容器 -->
+        <div id="animalList" class="masonry-grid mb-6">
+            <!-- 动态渲染区域 -->
+        </div>
+
+        <!-- 分页控件 -->
+        <div id="pagination" class="flex justify-center items-center gap-2 mt-8 mb-4 hidden">
+            <button id="prevPage" class="pagination-btn" disabled>
+                <i class="fa fa-chevron-left"></i>
+            </button>
+            <div id="pageNumbers" class="flex gap-1"></div>
+            <button id="nextPage" class="pagination-btn">
+                <i class="fa fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- 底部装饰 -->
+        <div class="mt-8 text-center text-xs text-natural-text-light">
+            <p>动物信息展示 © 2025</p>
+        </div>
+
+        <!-- 返回顶部按钮 -->
+        <button id="backToTop" class="back-to-top">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+    </div>
+
+    <script>
+        const CONFIG = {
+            JSON_DATA_URL: 'https://fankent.github.io/cotw-helper/animal-data.json'
+        }
+
+        // 全局状态管理
+        const state = {
+            allData: [], // 从JSON加载的原始数据
+            filteredData: [], // 筛选后的数据
+            currentPage: 1, // 当前页码
+            pageSize: 9, // 每页显示数量
+            isLoading: false, // 加载状态
+            searchKeyword: '' // 搜索关键词
+        }
+
+        // 工具函数 - 防抖
+        const debounce = (fn, delay = 300) => {
+            let timer = null
+            return (...args) => {
+                clearTimeout(timer)
+                timer = setTimeout(() => fn.apply(this, args), delay)
+            }
+        }
+
+        // 加载JSON数据（核心：从GitHub Pages请求）
+        const fetchAnimalData = async (keyword = '') => {
+            try {
+                state.isLoading = true
+                showLoading(true)
+                hideError()
+
+                // 从GitHub Pages加载JSON文件
+                const response = await fetch(CONFIG.JSON_DATA_URL)
+                if (!response.ok) throw new Error('网络请求失败')
+
+                // 解析JSON数据
+                const rawData = await response.json()
+                // 为每条数据添加唯一ID（可选，方便后续操作）
+                state.allData = rawData.map((item, index) => ({ ...item, id: index + 1 }))
+
+                // 筛选数据
+                if (keyword) {
+                    state.filteredData = state.allData.filter(animal =>
+                        animal.name.toLowerCase().includes(keyword.toLowerCase()) ||
+                        (animal.englishName && animal.englishName.toLowerCase().includes(keyword.toLowerCase()))
+                    )
+                } else {
+                    state.filteredData = [...state.allData]
+                }
+
+                state.isLoading = false
+                showLoading(false)
+                return state.filteredData
+            } catch (error) {
+                console.error('数据加载失败:', error)
+                state.isLoading = false
+                showLoading(false)
+                showError() // 显示错误提示
+                return []
+            }
+        }
+
+        // 渲染骨架屏
+        const renderSkeleton = (count = 9) => {
+            const container = document.getElementById('animalList')
+            let skeletonHTML = ''
+
+            for (let i = 0; i < count; i++) {
+                skeletonHTML += `
+          <div class="skeleton-card">
+            <div class="skeleton-text-lg w-1/2 mb-4"></div>
+            <div class="skeleton-text w-full mb-2"></div>
+            <div class="skeleton-text w-full mb-2"></div>
+            <div class="skeleton-text w-full mb-6"></div>
+            <div class="flex flex-wrap mb-4">
+              <div class="skeleton-tag"></div>
+              <div class="skeleton-tag"></div>
+              <div class="skeleton-tag"></div>
+            </div>
+            <div class="flex flex-wrap mb-4">
+              <div class="skeleton-precious"></div>
+              <div class="skeleton-precious"></div>
+            </div>
+            <div class="mb-4">
+              <div class="skeleton-text w-1/4 mb-3"></div>
+              <div class="skeleton-map"></div>
+              <div class="skeleton-map"></div>
+              <div class="skeleton-map"></div>
+            </div>
+            <div>
+              <div class="skeleton-text w-1/4 mb-3"></div>
+              <div class="skeleton-tag"></div>
+              <div class="skeleton-tag"></div>
+            </div>
+          </div>
+        `
+            }
+
+            container.innerHTML = skeletonHTML
+        }
+
+        // 渲染动物卡片
+        const renderAnimalCards = () => {
+            const container = document.getElementById('animalList')
+            container.innerHTML = ''
+
+            // 计算分页数据
+            const start = (state.currentPage - 1) * state.pageSize
+            const end = start + state.pageSize
+            const paginatedData = state.filteredData.slice(start, end)
+
+            // 空状态
+            if (paginatedData.length === 0 && !state.isLoading) {
+                container.innerHTML = `
+          <div class="col-span-full text-center py-10 text-secondary">
+            <i class="fa fa-search mb-2 text-xl"></i>
+            <p>未找到匹配的动物信息</p>
+          </div>
+        `
+                hidePagination()
+                return
+            }
+
+            // 渲染卡片
+            paginatedData.forEach(animal => {
+                const commonFurTags = (animal.furTypes?.common || []).map(fur =>
+                    `<span class="tag-pill bg-natural-common-bg text-natural-common-text">${fur}</span>`
+                ).join('')
+
+                const rareFurTags = (animal.furTypes?.rare || []).map(fur =>
+                    `<span class="tag-pill bg-natural-rare-bg text-natural-rare-text">${fur}</span>`
+                ).join('')
+
+                // 珍禽毛色模块
+                let preciousFurModuleHTML = ''
+                if (animal.furTypes?.precious && Array.isArray(animal.furTypes.precious) && animal.furTypes.precious.length > 0) {
+                    const preciousFurTags = animal.furTypes.precious.map(fur =>
+                        `<span class="precious-tag">${fur}</span>`
+                    ).join('')
+
+                    preciousFurModuleHTML = `
+            <div class="mt-4">
+              <p class="text-secondary text-sm mb-3">珍禽毛色</p>
+              <div class="flex flex-wrap gap-2.5">
+                ${preciousFurTags}
+              </div>
+            </div>
+          `
+                }
+
+                const mapList = (animal.maps || []).map(map =>
+                    `<div class="map-list-item">
+            <i class="fa fa-map-marker map-icon"></i>
+            <span class="map-text">${map}</span>
+          </div>`
+                ).join('')
+
+                // 引诱工具模块
+                let lureModuleHTML = ''
+                if (animal.lures && Array.isArray(animal.lures) && animal.lures.length > 0) {
+                    const lureTags = animal.lures.map(lure =>
+                        `<span class="tag-pill bg-natural-tool-bg text-natural-tool-text">${lure}</span>`
+                    ).join('')
+
+                    lureModuleHTML = `
+            <div class="module-divider"></div>
+            <div>
+              <p class="text-secondary text-sm mb-3">引诱工具</p>
+              <div class="flex flex-wrap gap-2.5">
+                ${lureTags}
+              </div>
+            </div>
+          `
+                }
+
+                // 完整卡片HTML
+                const cardHTML = `
+          <div class="card-base">
+            <div class="info-row pb-4 border-b border-gray-100">
+              <div>
+                <p class="name-xl">${animal.name || '未知动物'}</p>
+                <p class="text-secondary italic mt-1">${animal.englishName || 'Unknown'}</p>
+              </div>
+              <div class="flex items-center self-end mb-1">
+                <p class="text-secondary text-xs mr-1">等级</p>
+                <span class="level-badge">${animal.level || 0}</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <p class="info-label">最高难度</p>
+              <p class="content-large">${animal.difficulty || '未知'}</p>
+            </div>
+            <div class="info-row">
+              <p class="info-label">饮水时间</p>
+              <p class="content-large">${animal.drinkTime || '未知'}</p>
+            </div>
+            <div class="info-row">
+              <p class="info-label">钻石评分线</p>
+              <p class="content-large">${animal.diamondScore || 0}</p>
+            </div>
+            
+            <!-- 毛色类型模块 -->
+            <div class="mt-6 mb-2">
+              <p class="text-secondary text-sm mb-3">毛色类型</p>
+              <div class="flex flex-wrap gap-2.5">
+                ${commonFurTags}
+                ${rareFurTags}
+              </div>
+            </div>
+            
+            <!-- 珍禽毛色模块 -->
+            ${preciousFurModuleHTML}
+
+            <div class="module-divider"></div>
+            
+            <!-- 可狩猎地图模块 -->
+            <div class="mb-4">
+              <p class="text-secondary text-sm mb-3">可狩猎地图</p>
+              <div class="w-full">
+                ${mapList}
+              </div>
+            </div>
+            
+            <!-- 引诱工具模块 -->
+            ${lureModuleHTML}
+          </div>
+        `
+
+                container.innerHTML += cardHTML
+            })
+
+            bindCardClickEvents()
+            renderPagination()
+            if (state.filteredData.length > state.pageSize) {
+                showPagination(true)
+            } else {
+                hidePagination()
+            }
+        }
+
+        // 渲染分页控件
+        const renderPagination = () => {
+            const pageNumbers = document.getElementById('pageNumbers')
+            const prevBtn = document.getElementById('prevPage')
+            const nextBtn = document.getElementById('nextPage')
+
+            const totalPages = Math.ceil(state.filteredData.length / state.pageSize)
+            pageNumbers.innerHTML = ''
+
+            prevBtn.disabled = state.currentPage === 1
+            nextBtn.disabled = state.currentPage === totalPages
+
+            let startPage = Math.max(1, state.currentPage - 2)
+            let endPage = Math.min(totalPages, startPage + 4)
+
+            if (endPage - startPage < 4) {
+                startPage = Math.max(1, endPage - 4)
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                const pageBtn = document.createElement('button')
+                pageBtn.className = `pagination-btn ${i === state.currentPage ? 'pagination-btn-active' : ''}`
+                pageBtn.textContent = i
+                pageBtn.addEventListener('click', () => {
+                    state.currentPage = i
+                    renderAnimalCards()
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                })
+                pageNumbers.appendChild(pageBtn)
+            }
+        }
+
+        // 绑定卡片点击事件
+        const bindCardClickEvents = () => {
+            document.querySelectorAll('.card-base').forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.add('bg-gray-50')
+                    setTimeout(() => {
+                        card.classList.remove('bg-gray-50')
+                    }, 150)
+                })
+            })
+        }
+
+        // 搜索功能
+        const initSearch = () => {
+            const searchInput = document.getElementById('animalSearch')
+
+            const handleSearch = debounce(async (keyword) => {
+                state.searchKeyword = keyword
+                state.currentPage = 1
+                await fetchAnimalData(keyword)
+                renderAnimalCards()
+            })
+
+            searchInput.addEventListener('input', (e) => {
+                handleSearch(e.target.value.trim())
+            })
+        }
+
+        // 分页事件绑定
+        const bindPaginationEvents = () => {
+            const prevBtn = document.getElementById('prevPage')
+            const nextBtn = document.getElementById('nextPage')
+
+            prevBtn.addEventListener('click', () => {
+                if (state.currentPage > 1) {
+                    state.currentPage--
+                    renderAnimalCards()
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+            })
+
+            nextBtn.addEventListener('click', () => {
+                const totalPages = Math.ceil(state.filteredData.length / state.pageSize)
+                if (state.currentPage < totalPages) {
+                    state.currentPage++
+                    renderAnimalCards()
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+            })
+        }
+
+        // 返回顶部功能
+        const initBackToTop = () => {
+            const backToTopBtn = document.getElementById('backToTop')
+
+            let scrollTimer = null
+            window.addEventListener('scroll', () => {
+                clearTimeout(scrollTimer)
+                scrollTimer = setTimeout(() => {
+                    if (window.scrollY > 300) {
+                        backToTopBtn.classList.add('show')
+                    } else {
+                        backToTopBtn.classList.remove('show')
+                    }
+                }, 100)
+            })
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+            })
+        }
+
+        // 工具函数：加载状态
+        const showLoading = (show) => {
+            const loadingTip = document.getElementById('loadingTip')
+            if (show) {
+                loadingTip.classList.remove('hidden')
+                renderSkeleton()
+            } else {
+                loadingTip.classList.add('hidden')
+            }
+        }
+
+        // 工具函数：错误提示
+        const showError = () => {
+            document.getElementById('errorTip').classList.remove('hidden')
+        }
+        const hideError = () => {
+            document.getElementById('errorTip').classList.add('hidden')
+        }
+
+        // 工具函数：分页控件
+        const showPagination = (show) => {
+            const pagination = document.getElementById('pagination')
+            if (show) {
+                pagination.classList.remove('hidden')
+            } else {
+                pagination.classList.add('hidden')
+            }
+        }
+        const hidePagination = () => showPagination(false)
+
+        // 页面初始化
+        const initPage = async () => {
+            // 初始加载数据
+            await fetchAnimalData()
+            renderAnimalCards()
+            initSearch()
+            bindPaginationEvents()
+            initBackToTop()
+        }
+
+        // 启动页面
+        initPage();
+    </script>
+</body>
+
+</html>
