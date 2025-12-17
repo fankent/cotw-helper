@@ -213,23 +213,33 @@
             }
         }
 
-        // 加载JSON数据（核心：从GitHub Pages请求）
-        const fetchAnimalData = async (keyword = '') => {
+        // 加载JSON数据（仅在未缓存或强制刷新时请求远端；搜索优先使用本地缓存）
+        const fetchAnimalData = async (keyword = '', forceReload = false) => {
             try {
+                // 如果已有缓存且不强制刷新，直接在本地筛选并返回
+                if (state.allData.length > 0 && !forceReload) {
+                    if (keyword) {
+                        state.filteredData = state.allData.filter(animal =>
+                            animal.name.toLowerCase().includes(keyword.toLowerCase()) ||
+                            (animal.englishName && animal.englishName.toLowerCase().includes(keyword.toLowerCase()))
+                        )
+                    } else {
+                        state.filteredData = [...state.allData]
+                    }
+                    return state.filteredData
+                }
+
                 state.isLoading = true
                 showLoading(true)
                 hideError()
 
-                // 从GitHub Pages加载JSON文件
+                // 只有在没有缓存或需要强制刷新时才发起网络请求
                 const response = await fetch(CONFIG.JSON_DATA_URL)
                 if (!response.ok) throw new Error('网络请求失败')
 
-                // 解析JSON数据
                 const rawData = await response.json()
-                // 为每条数据添加唯一ID（可选，方便后续操作）
                 state.allData = rawData.map((item, index) => ({ ...item, id: index + 1 }))
 
-                // 筛选数据
                 if (keyword) {
                     state.filteredData = state.allData.filter(animal =>
                         animal.name.toLowerCase().includes(keyword.toLowerCase()) ||
@@ -477,14 +487,15 @@
             })
         }
 
-        // 搜索功能
+        // 搜索功能（改为仅在本地筛选，不重复请求）
         const initSearch = () => {
             const searchInput = document.getElementById('animalSearch')
 
             const handleSearch = debounce(async (keyword) => {
                 state.searchKeyword = keyword
                 state.currentPage = 1
-                await fetchAnimalData(keyword)
+                // 使用已缓存数据进行筛选；fetchAnimalData 会在需要时自动请求一次远端数据
+                await fetchAnimalData(keyword, false)
                 renderAnimalCards()
             })
 
