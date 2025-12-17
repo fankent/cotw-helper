@@ -148,5 +148,50 @@
         },
         "maps": [ "桑达帕坦狩猎保护区" ],
         "lures": [ ]
+    },
+    {
+        "name": "驼鹿",
+        "englishName": "Moose",
+        "level": 8,
+        "difficulty": "5 - 中等",
+        "drinkTime": "12:00 - 16:00",
+        "diamondScore": 274.99,
+        "furTypes": {
+            "common": [ "深棕色", "浅褐色", "褐色", "棕褐色" ],
+            "rare": [ "马赛克", "黑化症", "花斑", "白化", "黑化" ],
+            "precious": [ "珍稀云杉纹", "珍稀桦木纹", "珍稀栎树纹", "珍稀斑纹", "珍稀灰白斑", "珍稀两色斑" ]
+        },
+        "maps": [ "莱顿湖区", "梅德韦泰嘉国家公园", "育空河谷自然保护区", "雷文图里海岸", "新英格兰山脉", "阿斯基岭狩猎保护区" ],
+        "lures": [ "驼鹿仿生哨" ]
+    },
+    {
+        "name": "灰熊",
+        "englishName": "Grizzly Bear",
+        "level": 8,
+        "difficulty": "9 - 传奇",
+        "drinkTime": "04:00 - 08:00",
+        "diamondScore": 48.5,
+        "furTypes": {
+            "common": [ "灰褐色" ],
+            "rare": [ "白化", "黑化", "褐色" ],
+            "precious": [ ]
+        },
+        "maps": [ "育空河谷自然保护区" ],
+        "lures": [ "掠食者幼鹿呼救仿生哨" ]
+    },
+    {
+        "name": "咸水鳄",
+        "englishName": "Saltwater Crocodile",
+        "level": 8,
+        "difficulty": "9 - 传奇",
+        "drinkTime": "-",
+        "diamondScore": 1015,
+        "furTypes": {
+            "common": [ "灰色", "橄榄色", "深棕色" ],
+            "rare": [ "花斑", "浅褐色", "白化", "黑化", "白色亚种" ],
+            "precious": [ ]
+        },
+        "maps": [ "澳大利亚翡翠海岸" ],
+        "lures": [ ]
     }
 ]
