@@ -13,5 +13,140 @@
         },
         "maps": [ "赫希费尔登狩猎保护区", "育空河谷自然保护区", "雷文图里海岸", "阿斯基岭狩猎保护区" ],
         "lures": [ "黑额黑雁诱捕道具", "黑额黑雁短簧片仿生哨" ]
+    },
+    {
+        "name": "好望角水牛",
+        "englishName": "Cape Buffalo",
+        "level": 9,
+        "difficulty": "9 - 传奇",
+        "drinkTime": "09:00 - 12:00",
+        "diamondScore": 151.35,
+        "furTypes": {
+            "common": [ "褐色", "灰色", "黑色" ],
+            "rare": [ "白色亚种", "白化" ],
+            "precious": [ ]
+        },
+        "maps": [ "乌尔霍加热带稀树草原" ],
+        "lures": [ ]
+    },
+    {
+        "name": "孟加拉虎",
+        "englishName": "Bengal Tiger",
+        "level": 9,
+        "difficulty": "9 - 传奇",
+        "drinkTime": "04:00 - 07:00",
+        "diamondScore": 57,
+        "furTypes": {
+            "common": [ "橙色" ],
+            "rare": [ "白化", "黑化", "白色无条纹", "白色", "金色", "伪黑化", "伪黑化白色" ],
+            "precious": [ ]
+        },
+        "maps": [ "桑达帕坦狩猎保护区" ],
+        "lures": [ "掠食者幼鹿呼救仿生哨" ]
+    },
+    {
+        "name": "森林野牛",
+        "englishName": "Wood Bison",
+        "level": 9,
+        "difficulty": "5 - 中等",
+        "drinkTime": "08:00 - 12:00",
+        "diamondScore": 158,
+        "furTypes": {
+            "common": [ "浅褐色", "姜黄", "姜黄条纹" ],
+            "rare": [ "花斑", "深棕色", "白化", "黑化", "白色亚种" ],
+            "precious": [ ]
+        },
+        "maps": [ "阿斯基岭狩猎保护区" ],
+        "lures": [ ]
+    },
+    {
+        "name": "欧洲野牛",
+        "englishName": "European Bison",
+        "level": 9,
+        "difficulty": "5 - 中等",
+        "drinkTime": "10:00 - 14:00",
+        "diamondScore": 127.62,
+        "furTypes": {
+            "common": [ "褐色", "深褐色", "浅褐色" ],
+            "rare": [ "白化", "花斑", "黑化" ],
+            "precious": [ ]
+        },
+        "maps": [ "赫希费尔登狩猎保护区" ],
+        "lures": [ ]
+    },
+    {
+        "name": "水牛",
+        "englishName": "Water Buffalo",
+        "level": 9,
+        "difficulty": "9 - 传奇",
+        "drinkTime": "12:00 - 15:00",
+        "diamondScore": 167.54,
+        "furTypes": {
+            "common": [ "灰色", "褐色", "黑色" ],
+            "rare": [ "橙色", "白化" ],
+            "precious": [ ]
+        },
+        "maps": [ "费南多自然公园", "桑达帕坦狩猎保护区" ],
+        "lures": [ ]
+    },
+    {
+        "name": "爪哇野牛",
+        "englishName": "Banteng",
+        "level": 9,
+        "difficulty": "5 - 中等",
+        "drinkTime": "17:00 - 20:00",
+        "diamondScore": 137,
+        "furTypes": {
+            "common": [ "橙色", "黑色", "褐色", "深褐色", "咖啡色" ],
+            "rare": [ "白化", "黑化" ],
+            "precious": [ ]
+        },
+        "maps": [ "澳大利亚翡翠海岸" ],
+        "lures": [ ]
+    },
+    {
+        "name": "狮子",
+        "englishName": "Lion",
+        "level": 9,
+        "difficulty": "9 - 传奇",
+        "drinkTime": "12:00 - 15:00",
+        "diamondScore": 48.5,
+        "furTypes": {
+            "common": [ "浅褐色", "棕褐色" ],
+            "rare": [ "白化", "深棕色", "亚麻色" ],
+            "precious": [ ]
+        },
+        "maps": [ "乌尔霍加热带稀树草原" ],
+        "lures": [ "掠食者幼鹿呼救仿生哨", "掠食者长耳野兔仿生哨" ]
+    },
+    {
+        "name": "美洲平原野牛",
+        "englishName": "Plains Bison",
+        "level": 9,
+        "difficulty": "5 - 中等",
+        "drinkTime": "08:00 - 12:00",
+        "diamondScore": 183.5,
+        "furTypes": {
+            "common": [ "浅褐色", "浅灰色", "褐色", "深色" ],
+            "rare": [ "白化", "黑化", "白色亚种" ],
+            "precious": [ ]
+        },
+        "maps": [ "育空河谷自然保护区", "银岭峰" ],
+        "lures": [ ]
+    },
+    {
+        "name": "野牦牛",
+        "englishName": "Wild Yak",
+        "level": 9,
+        "difficulty": "9 - 传奇",
+        "drinkTime": "08:00 - 12:00",
+        "diamondScore": 273.23,
+        "furTypes": {
+            "common": [ "深红色", "深褐色", "棕红色", "棕色", "墨黑" ],
+            "rare": [ "白化", "白色亚种", "金色" ],
+            "precious": [ ]
+        },
+        "maps": [ "桑达帕坦狩猎保护区" ],
+        "lures": [ ]
     }
 ]
