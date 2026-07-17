@@ -62,6 +62,7 @@
       
       /* 搜索框 */
       .search-input { @apply w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all; }
+      .filter-select { @apply w-full min-h-[44px] px-4 py-2.5 rounded-lg border border-gray-200 bg-white text-secondary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none cursor-pointer; }
       
       /* 瀑布流 - 核心修改 */
       .masonry-container { @apply relative; }
@@ -100,9 +101,18 @@
         <h1 class="page-title">《猎人：荒野的召唤》动物速查</h1>
         <p class="page-subtitle">theHunter: Call of the Wild</p>
 
-        <!-- 搜索框区域 -->
-        <div class="mb-6">
-            <input type="text" id="animalSearch" class="search-input" placeholder="输入动物名称搜索...">
+        <!-- 搜索与筛选区域 -->
+        <div class="mb-6 flex flex-col gap-3 md:flex-row">
+            <div class="flex-1">
+                <input type="text" id="animalSearch" class="search-input" placeholder="输入动物名称搜索...">
+            </div>
+            <div class="w-full md:w-80">
+                <div class="relative">
+                    <select id="mapFilter" class="filter-select">
+                        <option value="">全部地图</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
         <!-- 加载状态提示 -->
@@ -201,7 +211,8 @@
             currentPage: 1, // 当前页码
             pageSize: 20, // 每页显示数量
             isLoading: false, // 加载状态
-            searchKeyword: '' // 搜索关键词
+            searchKeyword: '', // 搜索关键词
+            selectedMap: '' // 当前地图筛选
         }
 
         // 工具函数 - 防抖
@@ -213,19 +224,51 @@
             }
         }
 
+        const applyFilters = (data = [], keyword = '', selectedMap = '') => {
+            const normalizedKeyword = keyword.toLowerCase()
+
+            return data.filter(animal => {
+                const matchesKeyword = !normalizedKeyword ||
+                    animal.name.toLowerCase().includes(normalizedKeyword) ||
+                    (animal.englishName && animal.englishName.toLowerCase().includes(normalizedKeyword))
+
+                const matchesMap = !selectedMap || (animal.maps || []).includes(selectedMap)
+
+                return matchesKeyword && matchesMap
+            })
+        }
+
+        const populateMapOptions = () => {
+            const mapFilter = document.getElementById('mapFilter')
+            if (!mapFilter) return
+
+            const currentValue = mapFilter.value
+            const mapList = [...new Set(state.allData.flatMap(animal => animal.maps || []))].sort((a, b) =>
+                a.localeCompare(b, 'zh-Hans-CN')
+            )
+
+            mapFilter.innerHTML = '<option value="">全部地图</option>'
+            mapList.forEach(map => {
+                const option = document.createElement('option')
+                option.value = map
+                option.textContent = map
+                mapFilter.appendChild(option)
+            })
+
+            if (mapList.includes(currentValue)) {
+                mapFilter.value = currentValue
+            } else {
+                mapFilter.value = ''
+            }
+        }
+
         // 加载JSON数据（仅在未缓存或强制刷新时请求远端；搜索优先使用本地缓存）
-        const fetchAnimalData = async (keyword = '', forceReload = false) => {
+        const fetchAnimalData = async (keyword = '', selectedMap = '', forceReload = false) => {
             try {
                 // 如果已有缓存且不强制刷新，直接在本地筛选并返回
                 if (state.allData.length > 0 && !forceReload) {
-                    if (keyword) {
-                        state.filteredData = state.allData.filter(animal =>
-                            animal.name.toLowerCase().includes(keyword.toLowerCase()) ||
-                            (animal.englishName && animal.englishName.toLowerCase().includes(keyword.toLowerCase()))
-                        )
-                    } else {
-                        state.filteredData = [...state.allData]
-                    }
+                    state.filteredData = applyFilters(state.allData, keyword, selectedMap)
+                    populateMapOptions()
                     return state.filteredData
                 }
 
@@ -239,15 +282,8 @@
 
                 const rawData = await response.json()
                 state.allData = rawData.map((item, index) => ({ ...item, id: index + 1 }))
-
-                if (keyword) {
-                    state.filteredData = state.allData.filter(animal =>
-                        animal.name.toLowerCase().includes(keyword.toLowerCase()) ||
-                        (animal.englishName && animal.englishName.toLowerCase().includes(keyword.toLowerCase()))
-                    )
-                } else {
-                    state.filteredData = [...state.allData]
-                }
+                populateMapOptions()
+                state.filteredData = applyFilters(state.allData, keyword, selectedMap)
 
                 state.isLoading = false
                 showLoading(false)
@@ -487,20 +523,27 @@
             })
         }
 
-        // 搜索功能（改为仅在本地筛选，不重复请求）
-        const initSearch = () => {
+        // 搜索与地图筛选功能
+        const initFilters = () => {
             const searchInput = document.getElementById('animalSearch')
+            const mapFilter = document.getElementById('mapFilter')
 
-            const handleSearch = debounce(async (keyword) => {
-                state.searchKeyword = keyword
+            const handleSearch = debounce(async () => {
                 state.currentPage = 1
-                // 使用已缓存数据进行筛选；fetchAnimalData 会在需要时自动请求一次远端数据
-                await fetchAnimalData(keyword, false)
+                await fetchAnimalData(state.searchKeyword, state.selectedMap, false)
                 renderAnimalCards()
-            })
+            }, 250)
 
             searchInput.addEventListener('input', (e) => {
-                handleSearch(e.target.value.trim())
+                state.searchKeyword = e.target.value.trim()
+                handleSearch()
+            })
+
+            mapFilter.addEventListener('change', async (e) => {
+                state.selectedMap = e.target.value
+                state.currentPage = 1
+                await fetchAnimalData(state.searchKeyword, state.selectedMap, false)
+                renderAnimalCards()
             })
         }
 
@@ -581,9 +624,9 @@
         // 初始化
         const init = async () => {
             renderSkeleton()
-            await fetchAnimalData()
+            await fetchAnimalData(state.searchKeyword, state.selectedMap)
             renderAnimalCards()
-            initSearch()
+            initFilters()
             bindPaginationEvents()
             initBackToTop()
         }
