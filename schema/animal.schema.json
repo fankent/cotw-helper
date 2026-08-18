@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/fankent/cotw-helper/schema/animal.schema.json",
+  "title": "cotw-helper 动物数据契约",
+  "description": "《猎人：荒野的召唤》动物资料数据源的数据契约。源数据位于 src/data/，构建产物为合并后的 animal-data.json。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "maps", "furTypes", "lures", "animals"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "gameVersion", "updatedAt", "count", "builtAt", "generatedBy"],
+      "properties": {
+        "version": { "type": "string", "description": "数据版本号（semver）" },
+        "gameVersion": { "type": "string", "description": "对应的游戏版本，未知时为'未知（待录入）'" },
+        "updatedAt": { "type": "string", "format": "date", "description": "数据最后更新日期" },
+        "count": { "type": "integer", "minimum": 0, "description": "动物总条数" },
+        "builtAt": { "type": "string", "format": "date-time", "description": "构建时间" },
+        "generatedBy": { "const": "cotw-helper/build.mjs", "description": "构建器标识" }
+      }
+    },
+    "maps": {
+      "type": "array",
+      "description": "地图维度表",
+      "items": { "$ref": "#/definitions/namedEntry" },
+      "uniqueItems": true
+    },
+    "furTypes": {
+      "type": "array",
+      "description": "毛色维度表",
+      "items": { "$ref": "#/definitions/namedEntry" },
+      "uniqueItems": true
+    },
+    "lures": {
+      "type": "array",
+      "description": "诱饵维度表",
+      "items": { "$ref": "#/definitions/namedEntry" },
+      "uniqueItems": true
+    },
+    "animals": {
+      "type": "array",
+      "description": "动物主数据",
+      "items": { "$ref": "#/definitions/animal" },
+      "uniqueItems": true
+    }
+  },
+  "definitions": {
+    "namedEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "description": "稳定标识，被 animals 引用" },
+        "name": { "type": "string", "minLength": 1, "description": "展示名称" }
+      }
+    },
+    "furCategory": {
+      "type": "string",
+      "enum": ["common", "rare", "precious"]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["3 - 非常简单", "5 - 中等", "9 - 传奇"],
+      "description": "难度枚举，值含等级前缀，展示时直接使用"
+    },
+    "timeRange": {
+      "type": "string",
+      "pattern": "^\\d{2}:\\d{2} - \\d{2}:\\d{2}$",
+      "description": "时间段，如 09:00 - 12:00；允许跨天（20:00 - 00:00）"
+    },
+    "animal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "englishName", "level", "difficulty", "drinkTime", "diamondScore", "furTypeIds", "mapIds", "lureIds"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "动物稳定标识，英文名 slug 化"
+        },
+        "name": { "type": "string", "minLength": 1, "description": "中文名" },
+        "englishName": { "type": "string", "description": "英文名，可为空字符串" },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9,
+          "description": "游戏内动物等级 1-9"
+        },
+        "difficulty": { "$ref": "#/definitions/difficulty" },
+        "drinkTime": {
+          "type": "array",
+          "description": "饮水/活动时间段。空数组表示无数据；多元素表示多时段。严禁内嵌 HTML",
+          "items": { "$ref": "#/definitions/timeRange" },
+          "uniqueItems": true
+        },
+        "diamondScore": {
+          "type": "number",
+          "minimum": 0,
+          "description": "钻石评分线"
+        },
+        "furTypeIds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["common", "rare", "precious"],
+          "description": "毛色引用，按稀有度分类；值引用 furTypes 维度表的 id",
+          "properties": {
+            "common": { "type": "array", "items": { "type": "string" } },
+            "rare": { "type": "array", "items": { "type": "string" } },
+            "precious": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "mapIds": {
+          "type": "array",
+          "description": "可狩猎地图引用，值引用 maps 维度表的 id",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "lureIds": {
+          "type": "array",
+          "description": "诱饵引用，值引用 lures 维度表的 id",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

@@ -148,6 +148,7 @@
         <!-- 底部装饰 -->
         <div class="mt-8 text-center text-xs text-natural-text-light">
             <p>数据来自网络收集，仅供参考</p>
+            <p id="versionInfo" class="mt-1 hidden"></p>
         </div>
 
         <!-- 返回顶部按钮 -->
@@ -201,18 +202,36 @@
     </style>
     <script>
         const CONFIG = {
-            JSON_DATA_URL: 'https://fankent.github.io/cotw-helper/animal-data.json'
+            // 相对路径：本地预览与 GitHub Pages 均可用（构建产物同目录）
+            JSON_DATA_URL: './animal-data.json'
         }
 
         // 全局状态管理
         const state = {
-            allData: [], // 从JSON加载的原始数据
+            meta: {}, // 数据版本信息 { version, gameVersion, updatedAt, count }
+            maps: [], // 地图维度表 [{ id, name }]
+            furTypes: [], // 毛色维度表 [{ id, name }]
+            lures: [], // 诱饵维度表 [{ id, name }]
+            mapNameById: {}, // id -> 地图名（渲染用 lookup）
+            furNameById: {}, // id -> 毛色名
+            lureNameById: {}, // id -> 诱饵名
+            allData: [], // 动物主数据（规范化结构）
             filteredData: [], // 筛选后的数据
             currentPage: 1, // 当前页码
             pageSize: 20, // 每页显示数量
             isLoading: false, // 加载状态
             searchKeyword: '', // 搜索关键词
-            selectedMap: '' // 当前地图筛选
+            selectedMap: '' // 当前地图筛选（地图 id）
+        }
+
+        // HTML 转义：数据来自网络收集，渲染前统一转义，杜绝 XSS
+        const escapeHtml = (s) => {
+            return String(s ?? '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;')
         }
 
         // 工具函数 - 防抖
@@ -232,7 +251,7 @@
                     animal.name.toLowerCase().includes(normalizedKeyword) ||
                     (animal.englishName && animal.englishName.toLowerCase().includes(normalizedKeyword))
 
-                const matchesMap = !selectedMap || (animal.maps || []).includes(selectedMap)
+                const matchesMap = !selectedMap || (animal.mapIds || []).includes(selectedMap)
 
                 return matchesKeyword && matchesMap
             })
@@ -243,19 +262,19 @@
             if (!mapFilter) return
 
             const currentValue = mapFilter.value
-            const mapList = [...new Set(state.allData.flatMap(animal => animal.maps || []))].sort((a, b) =>
-                a.localeCompare(b, 'zh-Hans-CN')
+            const mapList = [...state.maps].sort((a, b) =>
+                a.name.localeCompare(b.name, 'zh-Hans-CN')
             )
 
             mapFilter.innerHTML = '<option value="">全部地图</option>'
             mapList.forEach(map => {
                 const option = document.createElement('option')
-                option.value = map
-                option.textContent = map
+                option.value = map.id
+                option.textContent = map.name
                 mapFilter.appendChild(option)
             })
 
-            if (mapList.includes(currentValue)) {
+            if (mapList.some(m => m.id === currentValue)) {
                 mapFilter.value = currentValue
             } else {
                 mapFilter.value = ''
@@ -281,7 +300,16 @@
                 if (!response.ok) throw new Error('网络请求失败')
 
                 const rawData = await response.json()
-                state.allData = rawData.map((item, index) => ({ ...item, id: index + 1 }))
+                // 新数据结构：{ meta, maps, furTypes, lures, animals }
+                state.meta = rawData.meta || {}
+                state.maps = rawData.maps || []
+                state.furTypes = rawData.furTypes || []
+                state.lures = rawData.lures || []
+                state.mapNameById = Object.fromEntries(state.maps.map(m => [m.id, m.name]))
+                state.furNameById = Object.fromEntries(state.furTypes.map(f => [f.id, f.name]))
+                state.lureNameById = Object.fromEntries(state.lures.map(l => [l.id, l.name]))
+                state.allData = rawData.animals || []
+                renderVersionInfo()
                 populateMapOptions()
                 state.filteredData = applyFilters(state.allData, keyword, selectedMap)
 
@@ -362,19 +390,24 @@
 
             // 渲染卡片
             paginatedData.forEach(animal => {
-                const commonFurTags = (animal.furTypes?.common || []).map(fur =>
-                    `<span class="tag-pill bg-natural-common-bg text-natural-common-text">${fur}</span>`
+                // id 引用 → 展示名（查不到时回退原 id，保证不丢数据）
+                const furName = (id) => state.furNameById[id] || id
+                const mapName = (id) => state.mapNameById[id] || id
+                const lureName = (id) => state.lureNameById[id] || id
+
+                const commonFurTags = (animal.furTypeIds?.common || []).map(id =>
+                    `<span class="tag-pill bg-natural-common-bg text-natural-common-text">${escapeHtml(furName(id))}</span>`
                 ).join('')
 
-                const rareFurTags = (animal.furTypes?.rare || []).map(fur =>
-                    `<span class="tag-pill bg-natural-rare-bg text-natural-rare-text">${fur}</span>`
+                const rareFurTags = (animal.furTypeIds?.rare || []).map(id =>
+                    `<span class="tag-pill bg-natural-rare-bg text-natural-rare-text">${escapeHtml(furName(id))}</span>`
                 ).join('')
 
                 // 珍禽毛色模块
                 let preciousFurModuleHTML = ''
-                if (animal.furTypes?.precious && Array.isArray(animal.furTypes.precious) && animal.furTypes.precious.length > 0) {
-                    const preciousFurTags = animal.furTypes.precious.map(fur =>
-                        `<span class="precious-tag">${fur}</span>`
+                if (animal.furTypeIds?.precious && Array.isArray(animal.furTypeIds.precious) && animal.furTypeIds.precious.length > 0) {
+                    const preciousFurTags = animal.furTypeIds.precious.map(id =>
+                        `<span class="precious-tag">${escapeHtml(furName(id))}</span>`
                     ).join('')
 
                     preciousFurModuleHTML = `
@@ -387,18 +420,18 @@
           `
                 }
 
-                const mapList = (animal.maps || []).map(map =>
+                const mapList = (animal.mapIds || []).map(id =>
                     `<div class="map-list-item">
             <i class="fa fa-map-marker map-icon"></i>
-            <span class="map-text">${map}</span>
+            <span class="map-text">${escapeHtml(mapName(id))}</span>
           </div>`
                 ).join('')
 
                 // 引诱工具模块
                 let lureModuleHTML = ''
-                if (animal.lures && Array.isArray(animal.lures) && animal.lures.length > 0) {
-                    const lureTags = animal.lures.map(lure =>
-                        `<span class="tag-pill bg-natural-tool-bg text-natural-tool-text">${lure}</span>`
+                if (animal.lureIds && Array.isArray(animal.lureIds) && animal.lureIds.length > 0) {
+                    const lureTags = animal.lureIds.map(id =>
+                        `<span class="tag-pill bg-natural-tool-bg text-natural-tool-text">${escapeHtml(lureName(id))}</span>`
                     ).join('')
 
                     lureModuleHTML = `
@@ -412,31 +445,36 @@
           `
                 }
 
+                // 饮水时间：数组 → 多行展示（原 <br/> 数据已规范化，展示层重建）
+                const drinkTimeHtml = (animal.drinkTime && animal.drinkTime.length > 0)
+                    ? animal.drinkTime.map(t => escapeHtml(t)).join('<br/>')
+                    : '-'
+
                 // 完整卡片HTML - 增加了masonry-item容器
                 const cardHTML = `
           <div class="masonry-item">
             <div class="card-base">
               <div class="info-row pb-4 border-b border-gray-100">
                 <div>
-                  <p class="name-xl">${animal.name || '未知动物'}</p>
-                  <p class="text-secondary italic mt-1">${animal.englishName || 'Unknown'}</p>
+                  <p class="name-xl">${escapeHtml(animal.name || '未知动物')}</p>
+                  <p class="text-secondary italic mt-1">${escapeHtml(animal.englishName || 'Unknown')}</p>
                 </div>
                 <div class="flex items-center self-end mb-1">
                   <p class="text-secondary text-xs mr-1">等级</p>
-                  <span class="level-badge">${animal.level || 0}</span>
+                  <span class="level-badge">${escapeHtml(animal.level ?? 0)}</span>
                 </div>
               </div>
               <div class="info-row">
                 <p class="info-label">最高难度</p>
-                <p class="content-large">${animal.difficulty || '未知'}</p>
+                <p class="content-large">${escapeHtml(animal.difficulty || '未知')}</p>
               </div>
               <div class="info-row">
                 <p class="info-label">饮水时间</p>
-                <p class="content-large">${animal.drinkTime || '未知'}</p>
+                <p class="content-large">${drinkTimeHtml}</p>
               </div>
               <div class="info-row">
                 <p class="info-label">钻石评分线</p>
-                <p class="content-large">${animal.diamondScore || 0}</p>
+                <p class="content-large">${escapeHtml(animal.diamondScore ?? 0)}</p>
               </div>
               
               <!-- 毛色类型模块 -->
@@ -521,6 +559,14 @@
                     }, 150)
                 })
             })
+        }
+
+        // 渲染数据版本信息（数据层可追溯性的前端呈现）
+        const renderVersionInfo = () => {
+            const el = document.getElementById('versionInfo')
+            if (!el || !state.meta?.version) return
+            el.textContent = `数据版本 v${state.meta.version} · 游戏版本 ${state.meta.gameVersion} · 更新于 ${state.meta.updatedAt} · 共 ${state.meta.count} 种动物`
+            el.classList.remove('hidden')
         }
 
         // 搜索与地图筛选功能

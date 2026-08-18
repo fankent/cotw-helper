@@ -1,0 +1,3849 @@
+[
+  {
+    "id": "cape-buffalo",
+    "name": "好望角水牛",
+    "englishName": "Cape Buffalo",
+    "level": 9,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "09:00 - 12:00"
+    ],
+    "diamondScore": 151.35,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "黑色"
+      ],
+      "rare": [
+        "白色亚种",
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "bengal-tiger",
+    "name": "孟加拉虎",
+    "englishName": "Bengal Tiger",
+    "level": 9,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "04:00 - 07:00"
+    ],
+    "diamondScore": 57,
+    "furTypeIds": {
+      "common": [
+        "橙色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色无条纹",
+        "白色",
+        "金色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": [
+      "掠食者幼鹿呼救仿生哨"
+    ]
+  },
+  {
+    "id": "wood-bison",
+    "name": "森林野牛",
+    "englishName": "Wood Bison",
+    "level": 9,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "08:00 - 12:00"
+    ],
+    "diamondScore": 158,
+    "furTypeIds": {
+      "common": [
+        "浅褐色",
+        "姜黄",
+        "姜黄条纹"
+      ],
+      "rare": [
+        "花斑",
+        "深棕色",
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "european-bison",
+    "name": "欧洲野牛",
+    "englishName": "European Bison",
+    "level": 9,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "10:00 - 14:00"
+    ],
+    "diamondScore": 127.62,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "深褐色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "花斑",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "water-buffalo",
+    "name": "水牛",
+    "englishName": "Water Buffalo",
+    "level": 9,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "12:00 - 15:00"
+    ],
+    "diamondScore": 167.54,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "褐色",
+        "黑色"
+      ],
+      "rare": [
+        "橙色",
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "费南多自然公园",
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "banteng",
+    "name": "爪哇野牛",
+    "englishName": "Banteng",
+    "level": 9,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "17:00 - 20:00"
+    ],
+    "diamondScore": 137,
+    "furTypeIds": {
+      "common": [
+        "橙色",
+        "黑色",
+        "褐色",
+        "深褐色",
+        "咖啡色"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "lion",
+    "name": "狮子",
+    "englishName": "Lion",
+    "level": 9,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "12:00 - 15:00"
+    ],
+    "diamondScore": 48.5,
+    "furTypeIds": {
+      "common": [
+        "浅褐色",
+        "棕褐色"
+      ],
+      "rare": [
+        "白化",
+        "深棕色",
+        "亚麻色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": [
+      "掠食者幼鹿呼救仿生哨",
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "plains-bison",
+    "name": "美洲平原野牛",
+    "englishName": "Plains Bison",
+    "level": 9,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "08:00 - 12:00"
+    ],
+    "diamondScore": 183.5,
+    "furTypeIds": {
+      "common": [
+        "浅褐色",
+        "浅灰色",
+        "褐色",
+        "深色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "育空河谷自然保护区",
+      "银岭峰"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "wild-yak",
+    "name": "野牦牛",
+    "englishName": "Wild Yak",
+    "level": 9,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "08:00 - 12:00"
+    ],
+    "diamondScore": 273.23,
+    "furTypeIds": {
+      "common": [
+        "深红色",
+        "深褐色",
+        "棕红色",
+        "棕色",
+        "墨黑"
+      ],
+      "rare": [
+        "白化",
+        "白色亚种",
+        "金色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "moose",
+    "name": "驼鹿",
+    "englishName": "Moose",
+    "level": 8,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "12:00 - 16:00"
+    ],
+    "diamondScore": 274.99,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "浅褐色",
+        "褐色",
+        "棕褐色"
+      ],
+      "rare": [
+        "马赛克",
+        "黑足狼",
+        "花斑",
+        "白化",
+        "黑化"
+      ],
+      "precious": [
+        "珍稀云杉纹",
+        "珍稀桦木纹",
+        "珍稀栎树纹",
+        "珍稀斑纹",
+        "珍稀灰白斑",
+        "珍稀两色斑"
+      ]
+    },
+    "mapIds": [
+      "莱顿湖区",
+      "梅德韦泰嘉国家公园",
+      "育空河谷自然保护区",
+      "雷文图里海岸",
+      "新英格兰山脉",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "驼鹿仿生哨"
+    ]
+  },
+  {
+    "id": "grizzly-bear",
+    "name": "灰熊",
+    "englishName": "Grizzly Bear",
+    "level": 8,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 48.5,
+    "furTypeIds": {
+      "common": [
+        "灰褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "褐色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "育空河谷自然保护区"
+    ],
+    "lureIds": [
+      "掠食者幼鹿呼救仿生哨"
+    ]
+  },
+  {
+    "id": "saltwater-crocodile",
+    "name": "咸水鳄",
+    "englishName": "Saltwater Crocodile",
+    "level": 8,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [],
+    "diamondScore": 1015,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "橄榄色",
+        "深棕色"
+      ],
+      "rare": [
+        "花斑",
+        "浅褐色",
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "black-caiman",
+    "name": "黑凯门鳄",
+    "englishName": "Black Caiman",
+    "level": 7,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [],
+    "diamondScore": 468,
+    "furTypeIds": {
+      "common": [
+        "深绿色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "带花斑",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "eurosian-brown-bear",
+    "name": "棕熊",
+    "englishName": "Eurosian Brown Bear",
+    "level": 7,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 27.7,
+    "furTypeIds": {
+      "common": [
+        "肉桂色",
+        "红棕色",
+        "浅褐色",
+        "金色",
+        "灵性",
+        "灰色",
+        "深棕色",
+        "亚麻色"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "梅德韦泰嘉国家公园",
+      "雷文图里海岸"
+    ],
+    "lureIds": [
+      "掠食者幼鹿呼救仿生哨"
+    ]
+  },
+  {
+    "id": "rocky-mountain-elk",
+    "name": "落基山麋鹿",
+    "englishName": "Rocky Mountain Elk",
+    "level": 7,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 481.41,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "浅褐色",
+        "浅灰色"
+      ],
+      "rare": [
+        "白化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "银岭峰"
+    ],
+    "lureIds": [
+      "麋鹿仿生哨"
+    ]
+  },
+  {
+    "id": "roosevelt-elk",
+    "name": "罗斯福麋鹿",
+    "englishName": "Roosevelt Elk",
+    "level": 7,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 380.84,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "橙色",
+        "棕褐色"
+      ],
+      "rare": [
+        "白化",
+        "花斑",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "莱顿湖区"
+    ],
+    "lureIds": [
+      "麋鹿仿生哨"
+    ]
+  },
+  {
+    "id": "american-alligator",
+    "name": "美洲短吻鳄",
+    "englishName": "American Alligator",
+    "level": 7,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [],
+    "diamondScore": 492,
+    "furTypeIds": {
+      "common": [
+        "橄榄色",
+        "深棕色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "密西西比阿克里斯保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "black-bear",
+    "name": "美洲黑熊",
+    "englishName": "Black Bear",
+    "level": 7,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 22.8,
+    "furTypeIds": {
+      "common": [
+        "黑色",
+        "深色",
+        "暗黑色"
+      ],
+      "rare": [
+        "金色",
+        "棕色",
+        "肉桂色"
+      ],
+      "precious": [
+        "珍稀栗色斑",
+        "珍稀米黄斑",
+        "珍稀冰川纹",
+        "珍稀灵性斑",
+        "珍稀斑点"
+      ]
+    },
+    "mapIds": [
+      "莱顿湖区",
+      "银岭峰",
+      "密西西比阿克里斯保护区",
+      "新英格兰山脉",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "掠食者幼鹿呼救仿生哨"
+    ]
+  },
+  {
+    "id": "manitoban-elk",
+    "name": "马尼托巴麋鹿",
+    "englishName": "Manitoban Elk",
+    "level": 7,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 457.56,
+    "furTypeIds": {
+      "common": [
+        "棕色鬃毛",
+        "深色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "麋鹿仿生哨"
+    ]
+  },
+  {
+    "id": "sambar",
+    "name": "黑鹿",
+    "englishName": "Sambar",
+    "level": 7,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "17:00 - 20:00"
+    ],
+    "diamondScore": 166.43,
+    "furTypeIds": {
+      "common": [
+        "黝黑渐层",
+        "褐色",
+        "深棕色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": [
+      "黑鹿仿生哨"
+    ]
+  },
+  {
+    "id": "spectacled-bear",
+    "name": "眼镜熊",
+    "englishName": "Spectacled Bear",
+    "level": 6,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 20.45,
+    "furTypeIds": {
+      "common": [
+        "眼镜型斑纹",
+        "极简的斑纹",
+        "X型斑纹",
+        "杂乱的斑纹",
+        "繁复的斑纹"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑",
+        "红化赤色",
+        "无斑纹",
+        "浅色面部",
+        "红化灰黄色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "south-american-tapir",
+    "name": "南美貘",
+    "englishName": "South American Tapir",
+    "level": 6,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [],
+    "diamondScore": 144,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑",
+        "红化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "jaguar",
+    "name": "美洲豹",
+    "englishName": "Jaguar",
+    "level": 6,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "21:00 - 00:00"
+    ],
+    "diamondScore": 43.75,
+    "furTypeIds": {
+      "common": [
+        "玫瑰斑纹",
+        "斑点",
+        "黑化（无纹路）",
+        "炭色黑狼"
+      ],
+      "rare": [
+        "白化",
+        "带花斑",
+        "白色亚种",
+        "黑化（带纹路）"
+      ],
+      "precious": [
+        "珍稀瓷釉色",
+        "珍稀绯霞色",
+        "珍稀织锦色",
+        "珍稀暗影色",
+        "珍稀羊皮色",
+        "珍稀鎏金暮色",
+        "珍稀象牙树皮色"
+      ]
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": [
+      "电子仿生哨"
+    ]
+  },
+  {
+    "id": "iberian-wolf",
+    "name": "伊比利亚狼",
+    "englishName": "Iberian Wolf",
+    "level": 6,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "03:00 - 06:00"
+    ],
+    "diamondScore": 39,
+    "furTypeIds": {
+      "common": [
+        "灰褐色",
+        "灰色"
+      ],
+      "rare": [
+        "橄榄色",
+        "原始",
+        "冬季",
+        "黑化",
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "夸特罗科利纳斯野生动物保护区"
+    ],
+    "lureIds": [
+      "掠食者幼鹿呼救仿生哨",
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "gemsbok",
+    "name": "南非剑羚",
+    "englishName": "Gemsbok",
+    "level": 6,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "03:00 - 06:00"
+    ],
+    "diamondScore": 337.59,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "浅灰色"
+      ],
+      "rare": [
+        "深色",
+        "米色",
+        "金色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": [
+      "鹿角撞击仿生器"
+    ]
+  },
+  {
+    "id": "mountain-reindeer",
+    "name": "山地驯鹿",
+    "englishName": "Mountain Reindeer",
+    "level": 6,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 430.23,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "棕褐色",
+        "深棕色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "梅德韦泰嘉国家公园"
+    ],
+    "lureIds": [
+      "鹿角撞击仿生器"
+    ]
+  },
+  {
+    "id": "woodland-reindeer",
+    "name": "林地驯鹿",
+    "englishName": "Woodland Reindeer",
+    "level": 6,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "20:00 - 00:00"
+    ],
+    "diamondScore": 430.23,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "鹿角撞击仿生器"
+    ]
+  },
+  {
+    "id": "grant-caribou",
+    "name": "格兰特驯鹿",
+    "englishName": "Grant Caribou",
+    "level": 6,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 430.23,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "育空河谷自然保护区"
+    ],
+    "lureIds": [
+      "鹿角撞击仿生器"
+    ]
+  },
+  {
+    "id": "barasingha",
+    "name": "沼鹿",
+    "englishName": "Barasingha",
+    "level": 6,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "12:00 - 15:00"
+    ],
+    "diamondScore": 226.05,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "红色",
+        "浅褐色",
+        "深红色",
+        "深棕色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": [
+      "鹿角撞击仿生器"
+    ]
+  },
+  {
+    "id": "gray-wolf",
+    "name": "灰狼",
+    "englishName": "Gray Wolf",
+    "level": 6,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "17:00 - 20:00",
+      "00:00 - 03:00"
+    ],
+    "diamondScore": 39,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色"
+      ],
+      "rare": [
+        "蛋白",
+        "红棕色",
+        "深灰色",
+        "黑化",
+        "白化",
+        "黑足狼",
+        "炭色黑狼"
+      ],
+      "precious": [
+        "珍稀双魂",
+        "珍稀疤纹",
+        "珍稀刃风",
+        "珍稀破晓",
+        "珍稀空谷",
+        "珍稀墓隐",
+        "珍稀先锋",
+        "珍稀霜痕",
+        "珍稀战棘"
+      ]
+    },
+    "mapIds": [
+      "梅德韦泰嘉国家公园",
+      "育空河谷自然保护区",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "掠食者幼鹿呼救仿生哨",
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "nilgai",
+    "name": "蓝牛羚",
+    "englishName": "Nilgai",
+    "level": 6,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "08:00 - 12:00"
+    ],
+    "diamondScore": 94.89,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "浅褐色",
+        "蓝色",
+        "深棕色"
+      ],
+      "rare": [
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": [
+      "雄兽鼻鸣喘息声仿生哨"
+    ]
+  },
+  {
+    "id": "blue-wildebeest",
+    "name": "蓝角马",
+    "englishName": "Blue Wildebeest",
+    "level": 6,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "06:00 - 09:00"
+    ],
+    "diamondScore": 37.69,
+    "furTypeIds": {
+      "common": [
+        "金色",
+        "灰色",
+        "深灰色"
+      ],
+      "rare": [
+        "白顶",
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": [
+      "雄兽鼻鸣喘息声仿生哨"
+    ]
+  },
+  {
+    "id": "red-deer",
+    "name": "赤鹿",
+    "englishName": "Red Deer",
+    "level": 6,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "06:00 - 10:00"
+    ],
+    "diamondScore": 251.07,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "深棕色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑",
+        "红化"
+      ],
+      "precious": [
+        "珍稀斑点"
+      ]
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区",
+      "费南多自然公园",
+      "夸特罗科利纳斯野生动物保护区",
+      "蒂阿拉罗瓦国家公园",
+      "澳大利亚翡翠海岸",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": [
+      "赤鹿仿生哨"
+    ]
+  },
+  {
+    "id": "javan-rusa",
+    "name": "鬣鹿",
+    "englishName": "Javan Rusa",
+    "level": 5,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "20:00 - 00:00"
+    ],
+    "diamondScore": 148.78,
+    "furTypeIds": {
+      "common": [
+        "白棕色",
+        "褐色",
+        "浅褐色",
+        "两色"
+      ],
+      "rare": [
+        "白化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": [
+      "黑鹿仿生哨"
+    ]
+  },
+  {
+    "id": "mule-deer",
+    "name": "骡鹿",
+    "englishName": "Mule Deer",
+    "level": 5,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "15:00 - 18:00"
+    ],
+    "diamondScore": 311.94,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "亚麻色",
+        "灰色"
+      ],
+      "rare": [
+        "稀释",
+        "花斑",
+        "黑化",
+        "白化",
+        "白色亚种"
+      ],
+      "precious": [
+        "珍稀银河纹",
+        "珍稀花瓣泡芙纹",
+        "珍稀肉桂条纹",
+        "珍稀蛛丝之谜纹",
+        "珍稀细雨纹",
+        "珍稀暗黑漂流纹"
+      ]
+    },
+    "mapIds": [
+      "费南多自然公园",
+      "银岭峰",
+      "阿罗约牧场",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "咩咩鹿鸣仿生哨"
+    ]
+  },
+  {
+    "id": "rocky-mountain-bighorn-sheep",
+    "name": "落基山大角羊",
+    "englishName": "Rocky Mountain Bighorn Sheep",
+    "level": 5,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "12:00 - 16:00"
+    ],
+    "diamondScore": 196.93,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "黑色",
+        "青铜色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "银岭峰",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "desert-bighorn-sheep",
+    "name": "沙漠大角羊",
+    "englishName": "Desert Bighorn Sheep",
+    "level": 5,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "11:00 - 16:00"
+    ],
+    "diamondScore": 196.93,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "浅褐色",
+        "浅灰色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑",
+        "红化",
+        "马赛克"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿罗约牧场"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "puma-mountain-lion",
+    "name": "美洲狮",
+    "englishName": "Puma/Mountain Lion",
+    "level": 5,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "21:00 - 00:00",
+      "00:00 - 03:00"
+    ],
+    "diamondScore": 39,
+    "furTypeIds": {
+      "common": [
+        "浅褐色",
+        "灰色",
+        "深红色"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "费南多自然公园",
+      "银岭峰",
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": [
+      "掠食者幼鹿呼救仿生哨"
+    ]
+  },
+  {
+    "id": "wild-boar",
+    "name": "野猪",
+    "englishName": "Wild Boar",
+    "level": 5,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "00:00 - 03:00"
+    ],
+    "diamondScore": 144.25,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "褐色",
+        "浅褐色"
+      ],
+      "rare": [
+        "黑金",
+        "紫灰",
+        "白化",
+        "黑化"
+      ],
+      "precious": [
+        "珍稀焦糖色",
+        "珍稀烟灰色",
+        "珍稀黑棕色",
+        "珍稀红褐色",
+        "珍稀黑白色",
+        "珍稀三花",
+        "珍稀斑点",
+        "珍稀条纹",
+        "珍稀暗红色"
+      ]
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区",
+      "梅德韦泰嘉国家公园",
+      "夸特罗科利纳斯野生动物保护区",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": [
+      "野猪仿生哨"
+    ]
+  },
+  {
+    "id": "feral-pig",
+    "name": "野猪（野化家猪）",
+    "englishName": "Feral Pig",
+    "level": 5,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "00:00 - 03:00",
+      "03:00 - 06:00"
+    ],
+    "diamondScore": 144.25,
+    "furTypeIds": {
+      "common": [
+        "黑色斑点",
+        "深棕色",
+        "棕色混种",
+        "黑色",
+        "黑金色"
+      ],
+      "rare": [
+        "白化",
+        "粉色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "蒂阿拉罗瓦国家公园",
+      "密西西比阿克里斯保护区",
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": [
+      "野猪仿生哨"
+    ]
+  },
+  {
+    "id": "blacktail-deer",
+    "name": "黑尾鹿",
+    "englishName": "Blacktail Deer",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "16:00 - 20:00"
+    ],
+    "diamondScore": 177.58,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "棕褐色",
+        "灰褐色",
+        "深灰色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "莱顿湖区"
+    ],
+    "lureIds": [
+      "咩咩鹿鸣仿生哨",
+      "咕噜鹿鸣仿生哨"
+    ]
+  },
+  {
+    "id": "whitetail-deer",
+    "name": "白尾鹿",
+    "englishName": "Whitetail Deer",
+    "level": 4,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [
+      "08:00 - 12:00"
+    ],
+    "diamondScore": 255.09,
+    "furTypeIds": {
+      "common": [
+        "红棕色",
+        "棕褐色",
+        "褐色",
+        "深棕色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑"
+      ],
+      "precious": [
+        "棕褐色",
+        "褐色",
+        "深棕色",
+        "花斑"
+      ]
+    },
+    "mapIds": [
+      "莱顿湖区",
+      "阿罗约牧场",
+      "密西西比阿克里斯保护区",
+      "雷文图里海岸",
+      "新英格兰山脉",
+      "阿斯基岭狩猎保护区",
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": [
+      "咕噜鹿鸣仿生哨",
+      "咩咩鹿鸣仿生哨",
+      "雄兽鼻鸣喘息声仿生哨"
+    ]
+  },
+  {
+    "id": "fallow-deer",
+    "name": "黄鹿（黇鹿）",
+    "englishName": "Fallow Deer",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "10:00 - 13:00"
+    ],
+    "diamondScore": 249.99,
+    "furTypeIds": {
+      "common": [
+        "赤色斑点",
+        "深色斑点",
+        "白色",
+        "巧克力色",
+        "深色",
+        "斑点"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑",
+        "黑足狼",
+        "红化"
+      ],
+      "precious": [
+        "珍稀金斑",
+        "珍稀棕斑",
+        "珍稀摩卡",
+        "珍稀斑点",
+        "珍稀银斑"
+      ]
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区",
+      "蒂阿拉罗瓦国家公园",
+      "澳大利亚翡翠海岸",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": [
+      "鹿角撞击仿生器"
+    ]
+  },
+  {
+    "id": "sika-deer",
+    "name": "梅花鹿",
+    "englishName": "Sika Deer",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "10:00 - 13:00"
+    ],
+    "diamondScore": 198.74,
+    "furTypeIds": {
+      "common": [
+        "黑色",
+        "褐色",
+        "深色斑点",
+        "斑点"
+      ],
+      "rare": [
+        "白化",
+        "赤色斑点"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "蒂阿拉罗瓦国家公园",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": [
+      "咕噜鹿鸣仿生哨",
+      "咩咩鹿鸣仿生哨",
+      "赤鹿仿生哨",
+      "雄兽鼻鸣喘息声仿生哨"
+    ]
+  },
+  {
+    "id": "lesser-kudu",
+    "name": "小旋角羚",
+    "englishName": "Lesser Kudu",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "18:00 - 21:00"
+    ],
+    "diamondScore": 151.64,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "深棕色"
+      ],
+      "rare": [
+        "红棕色",
+        "暗黑色",
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": [
+      "雄兽鼻鸣喘息声仿生哨",
+      "鹿角撞击仿生器"
+    ]
+  },
+  {
+    "id": "capybara",
+    "name": "水豚",
+    "englishName": "Capybara",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 66.5,
+    "furTypeIds": {
+      "common": [
+        "深褐色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "带花斑",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "snow-leopard",
+    "name": "雪豹",
+    "englishName": "Snow Leopard",
+    "level": 4,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [],
+    "diamondScore": 29,
+    "furTypeIds": {
+      "common": [
+        "雪纹",
+        "焦糖色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "warthog",
+    "name": "疣猪",
+    "englishName": "Warthog",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "15:00 - 18:00"
+    ],
+    "diamondScore": 58.19,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "深色",
+        "红棕色"
+      ],
+      "rare": [
+        "红色",
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": [
+      "野猪仿生哨"
+    ]
+  },
+  {
+    "id": "eastern-gray-kangaroo",
+    "name": "东部灰袋鼠",
+    "englishName": "Eastern Gray Kangaroo",
+    "level": 4,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "00:00 - 03:00"
+    ],
+    "diamondScore": 492,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "褐色",
+        "灰褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "tahr",
+    "name": "喜马拉雅塔尔羊",
+    "englishName": "Tahr",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 101.87,
+    "furTypeIds": {
+      "common": [
+        "红棕色",
+        "浅褐色",
+        "秸秆"
+      ],
+      "rare": [
+        "黑色",
+        "深红色",
+        "深棕色",
+        "白化",
+        "白色",
+        "红色"
+      ],
+      "precious": [
+        "珍稀金斑",
+        "珍稀灰斑",
+        "珍稀对半纹",
+        "珍稀拿铁斑",
+        "珍稀疤纹",
+        "珍稀头骨纹",
+        "珍稀雪纹"
+      ]
+    },
+    "mapIds": [
+      "蒂阿拉罗瓦国家公园",
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "blue-sheep",
+    "name": "岩羊",
+    "englishName": "Blue Sheep",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "14:00 - 17:00"
+    ],
+    "diamondScore": 154.08,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰白色",
+        "蓝灰色",
+        "黄色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "mountain-goat",
+    "name": "北美野山羊",
+    "englishName": "Mountain Goat",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 107.67,
+    "furTypeIds": {
+      "common": [
+        "米色",
+        "白色",
+        "浅褐色",
+        "浅灰色"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "银岭峰",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "iberian-mouflon",
+    "name": "伊比利亚摩弗伦羊",
+    "englishName": "Iberian Mouflon",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "18:00 - 21:00"
+    ],
+    "diamondScore": 179.56,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "灰色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "夸特罗科利纳斯野生动物保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "southeastern-spanish-ibex",
+    "name": "西班牙东南部山羊",
+    "englishName": "Southeastern Spanish Ibex",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "10:00 - 14:00"
+    ],
+    "diamondScore": 89.68,
+    "furTypeIds": {
+      "common": [
+        "黄褐色",
+        "浅褐色",
+        "灰褐色",
+        "浅灰色",
+        "橙色",
+        "棕色混种"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "夸特罗科利纳斯野生动物保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "gredos-ibex",
+    "name": "格雷多斯山羊",
+    "englishName": "Gredos Ibex",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "10:00 - 14:00"
+    ],
+    "diamondScore": 100.17,
+    "furTypeIds": {
+      "common": [
+        "黄褐色",
+        "浅褐色",
+        "灰褐色",
+        "浅灰色",
+        "灰色",
+        "棕色混种"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "夸特罗科利纳斯野生动物保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "ronda-ibex",
+    "name": "朗达山羊",
+    "englishName": "Ronda Ibex",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "10:00 - 14:00"
+    ],
+    "diamondScore": 107.98,
+    "furTypeIds": {
+      "common": [
+        "黄褐色",
+        "浅褐色",
+        "灰褐色",
+        "褐色",
+        "灰色",
+        "棕色混种"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "夸特罗科利纳斯野生动物保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "beceite-ibex",
+    "name": "贝赛特山羊",
+    "englishName": "Beceite Ibex",
+    "level": 4,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "10:00 - 14:00"
+    ],
+    "diamondScore": 191.63,
+    "furTypeIds": {
+      "common": [
+        "黄褐色",
+        "浅褐色",
+        "灰褐色",
+        "橙色",
+        "灰色",
+        "棕色混种"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "夸特罗科利纳斯野生动物保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "taruca",
+    "name": "马驼鹿",
+    "englishName": "Taruca",
+    "level": 3,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [
+      "14:00 - 17:00"
+    ],
+    "diamondScore": 101.66,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "深色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑",
+        "白色亚种",
+        "红化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "vicu-a",
+    "name": "骆马",
+    "englishName": "Vicuña",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "04:00 - 08:00"
+    ],
+    "diamondScore": 214,
+    "furTypeIds": {
+      "common": [
+        "米色",
+        "深色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑",
+        "白色亚种",
+        "浅银色",
+        "红化灰黄色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "axis-deer",
+    "name": "斑轴鹿",
+    "englishName": "Axis Deer",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "03:00 - 06:00"
+    ],
+    "diamondScore": 217.29,
+    "furTypeIds": {
+      "common": [
+        "斑点",
+        "橙色",
+        "深色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "费南多自然公园",
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": [
+      "斑轴鹿尖叫仿生哨"
+    ]
+  },
+  {
+    "id": "hog-deer",
+    "name": "豚鹿",
+    "englishName": "Hog Deer",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "13:00 - 17:00"
+    ],
+    "diamondScore": 108.68,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "褐色",
+        "深色斑点",
+        "斑点"
+      ],
+      "rare": [
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "roe-deer",
+    "name": "狍鹿",
+    "englishName": "Roe Deer",
+    "level": 3,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [
+      "14:00 - 17:00"
+    ],
+    "diamondScore": 81.86,
+    "furTypeIds": {
+      "common": [
+        "橙色",
+        "棕褐色",
+        "深灰色",
+        "深棕色",
+        "褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": [
+        "珍稀迷踪雾色",
+        "珍稀朝霞斑纹",
+        "珍稀古钢雾色",
+        "珍稀烈焰斑纹",
+        "珍稀迷雾斑纹",
+        "珍稀月影斑纹"
+      ]
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区",
+      "夸特罗科利纳斯野生动物保护区",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": [
+      "狍鹿仿生哨"
+    ]
+  },
+  {
+    "id": "blackbuck",
+    "name": "黑羚",
+    "englishName": "Blackbuck",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "18:00 - 21:00"
+    ],
+    "diamondScore": 132.26,
+    "furTypeIds": {
+      "common": [
+        "米色",
+        "深棕色",
+        "褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "费南多自然公园",
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": [
+      "鹿角撞击仿生器"
+    ]
+  },
+  {
+    "id": "springbok",
+    "name": "跳羚",
+    "englishName": "Springbok",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 78.55,
+    "furTypeIds": {
+      "common": [
+        "黑棕色",
+        "橙色",
+        "棕褐色"
+      ],
+      "rare": [
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": [
+      "雄兽鼻鸣喘息声仿生哨"
+    ]
+  },
+  {
+    "id": "pronghorn",
+    "name": "叉角羚",
+    "englishName": "Pronghorn",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "18:00 - 21:00"
+    ],
+    "diamondScore": 108,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "棕褐色",
+        "深色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "银岭峰",
+      "阿罗约牧场",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "feral-goat",
+    "name": "野山羊",
+    "englishName": "Feral Goat",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "15:00 - 18:00"
+    ],
+    "diamondScore": 208.71,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "白色",
+        "深棕色",
+        "亚麻色",
+        "黑棕色",
+        "白棕色",
+        "黑白色"
+      ],
+      "rare": [
+        "白化",
+        "黑色",
+        "混合色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "蒂阿拉罗瓦国家公园",
+      "澳大利亚翡翠海岸",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "chamois",
+    "name": "臆羚",
+    "englishName": "Chamois",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 58,
+    "furTypeIds": {
+      "common": [
+        "灰褐色",
+        "深棕色",
+        "褐色",
+        "蜂蜜色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "蒂阿拉罗瓦国家公园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "eurasian-lynx",
+    "name": "欧亚猞猁",
+    "englishName": "Eurasian Lynx",
+    "level": 3,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "03:00 - 06:00"
+    ],
+    "diamondScore": 27.68,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "梅德韦泰嘉国家公园",
+      "雷文图里海岸"
+    ],
+    "lureIds": [
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "collared-peccary",
+    "name": "领西猯",
+    "englishName": "Collared Peccary",
+    "level": 3,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "00:00 - 03:00"
+    ],
+    "diamondScore": 144.25,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "深灰色",
+        "深棕色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "黄褐色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "费南多自然公园",
+      "阿罗约牧场",
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": [
+      "掠食者长耳野兔仿生哨",
+      "野猪仿生哨"
+    ]
+  },
+  {
+    "id": "ocelot",
+    "name": "虎猫",
+    "englishName": "Ocelot",
+    "level": 2,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "03:00 - 06:00"
+    ],
+    "diamondScore": 27.68,
+    "furTypeIds": {
+      "common": [
+        "光滑",
+        "大胆",
+        "玫瑰斑纹"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑",
+        "白色亚种",
+        "炭色黑狼",
+        "红化赤色",
+        "红化灰黄色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": [
+      "电子仿生哨"
+    ]
+  },
+  {
+    "id": "siberian-musk-deer",
+    "name": "西伯利亚原麝",
+    "englishName": "Siberian Musk Deer",
+    "level": 2,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [
+      "08:00 - 12:00"
+    ],
+    "diamondScore": 249,
+    "furTypeIds": {
+      "common": [
+        "橙色",
+        "深棕色",
+        "灰褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "梅德韦泰嘉国家公园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "northern-red-muntjac",
+    "name": "北方赤麂",
+    "englishName": "Northern Red Muntjac",
+    "level": 2,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "15:00 - 18:00"
+    ],
+    "diamondScore": 35.24,
+    "furTypeIds": {
+      "common": [
+        "红色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": [
+      "狍鹿仿生哨"
+    ]
+  },
+  {
+    "id": "raccoon-dog",
+    "name": "貉",
+    "englishName": "Raccoon Dog",
+    "level": 2,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "00:00 - 03:00"
+    ],
+    "diamondScore": 9.29,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "浅褐色",
+        "黑白色"
+      ],
+      "rare": [
+        "白化",
+        "花斑",
+        "橙色",
+        "深棕色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸",
+      "萨尔茨维森公园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "coyote",
+    "name": "郊狼",
+    "englishName": "Coyote",
+    "level": 2,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "00:00 - 03:00"
+    ],
+    "diamondScore": 56.87,
+    "furTypeIds": {
+      "common": [
+        "浅灰色",
+        "深灰色",
+        "灰褐色",
+        "橙色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "莱顿湖区",
+      "阿罗约牧场",
+      "新英格兰山脉"
+    ],
+    "lureIds": [
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "side-striped-jackal",
+    "name": "侧纹胡狼",
+    "englishName": "Side-Striped Jackal",
+    "level": 2,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [],
+    "diamondScore": 29.1,
+    "furTypeIds": {
+      "common": [
+        "灰褐色",
+        "浅褐色",
+        "灰色"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": [
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "gray-fox",
+    "name": "灰狐",
+    "englishName": "Gray Fox",
+    "level": 2,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "17:00 - 20:00"
+    ],
+    "diamondScore": 6.43,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "红色",
+        "两色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "密西西比阿克里斯保护区",
+      "新英格兰山脉"
+    ],
+    "lureIds": [
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "red-fox",
+    "name": "赤狐",
+    "englishName": "Red Fox",
+    "level": 2,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "17:00 - 20:00"
+    ],
+    "diamondScore": 14.05,
+    "furTypeIds": {
+      "common": [
+        "红色",
+        "深红色",
+        "橙色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "花斑"
+      ],
+      "precious": [
+        "珍稀血月纹",
+        "珍稀糖杖纹",
+        "珍稀樱花纹",
+        "珍稀甘草纹",
+        "珍稀夜罂粟纹",
+        "珍稀神秘雪花纹",
+        "珍稀薄荷纹",
+        "珍稀玫瑰花蕾霜样纹",
+        "珍稀猩红茄属纹"
+      ]
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区",
+      "育空河谷自然保护区",
+      "新英格兰山脉",
+      "澳大利亚翡翠海岸",
+      "萨尔茨维森公园",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": [
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "tibetan-fox",
+    "name": "藏狐",
+    "englishName": "Tibetan Fox",
+    "level": 2,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "17:00 - 20:00"
+    ],
+    "diamondScore": 6.37,
+    "furTypeIds": {
+      "common": [
+        "红色",
+        "橙色",
+        "灰色",
+        "茶色"
+      ],
+      "rare": [
+        "沙色",
+        "烟灰色",
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": [
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "common-raccoon",
+    "name": "北美浣熊",
+    "englishName": "Common Raccoon",
+    "level": 2,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "00:00 - 03:00"
+    ],
+    "diamondScore": 12,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "亚麻色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "灰色带花斑",
+        "亚麻色带花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "密西西比阿克里斯保护区",
+      "新英格兰山脉",
+      "萨尔茨维森公园"
+    ],
+    "lureIds": [
+      "暴风浣熊呼叫器"
+    ]
+  },
+  {
+    "id": "bobcat-mexican-bobcat",
+    "name": "山猫&墨西哥山猫",
+    "englishName": "Bobcat&Mexican Bobcat",
+    "level": 2,
+    "difficulty": "9 - 传奇",
+    "drinkTime": [
+      "03:00 - 06:00"
+    ],
+    "diamondScore": 27.68,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "棕褐色",
+        "褐色",
+        "红色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "蓝色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿罗约牧场",
+      "新英格兰山脉"
+    ],
+    "lureIds": [
+      "掠食者长耳野兔仿生哨"
+    ]
+  },
+  {
+    "id": "north-american-beave",
+    "name": "北美河狸",
+    "englishName": "North American Beave",
+    "level": 2,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 30.4,
+    "furTypeIds": {
+      "common": [
+        "浅褐色",
+        "深棕色",
+        "红棕色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "european-badger",
+    "name": "欧洲獾",
+    "englishName": "European Badger",
+    "level": 2,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 16,
+    "furTypeIds": {
+      "common": [
+        "深灰色",
+        "灰色",
+        "褐色"
+      ],
+      "rare": [
+        "稀释",
+        "白化",
+        "黑化",
+        "红化赤色",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "western-mountain-coati",
+    "name": "西部长鼻浣熊",
+    "englishName": "Western Mountain Coati",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "17:00 - 20:00"
+    ],
+    "diamondScore": 1.45,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "深褐色",
+        "橙色"
+      ],
+      "rare": [
+        "黑化",
+        "白化",
+        "带花斑",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": [
+      "电子仿生哨"
+    ]
+  },
+  {
+    "id": "greater-grison",
+    "name": "大草原鼬",
+    "englishName": "Greater Grison",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [
+      "12:00 - 17:00"
+    ],
+    "diamondScore": 356,
+    "furTypeIds": {
+      "common": [
+        "深色",
+        "灰色",
+        "浅褐色"
+      ],
+      "rare": [
+        "黑化",
+        "白化",
+        "带花斑",
+        "白色亚种",
+        "红化巧克力色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": [
+      "电子仿生哨"
+    ]
+  },
+  {
+    "id": "antelope-jackrabbit",
+    "name": "羚羊兔",
+    "englishName": "Antelope Jackrabbit",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 6.33,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "深棕色",
+        "杂色"
+      ],
+      "rare": [
+        "黑化",
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿罗约牧场"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "eastern-cottontail-rabbit",
+    "name": "东部白尾灰兔",
+    "englishName": "Eastern Cottontail Rabbit",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 1.97,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "浅褐色",
+        "浅灰色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "密西西比阿克里斯保护区",
+      "新英格兰山脉"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "european-hare",
+    "name": "欧洲薮兔",
+    "englishName": "European Hare",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 6.5,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "深棕色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "夸特罗科利纳斯野生动物保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "european-rabbit",
+    "name": "欧洲野兔",
+    "englishName": "European Rabbit",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 2.42,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "棕褐色",
+        "褐色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "白色亚种",
+        "浅灰色",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区",
+      "蒂阿拉罗瓦国家公园",
+      "萨尔茨维森公园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "mountain-hare",
+    "name": "雪兔",
+    "englishName": "Mountain Hare",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 5.6,
+    "furTypeIds": {
+      "common": [
+        "浅褐色",
+        "深灰色",
+        "深棕色",
+        "浅灰色"
+      ],
+      "rare": [
+        "白色",
+        "白化",
+        "杂色中"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "scrub-hare",
+    "name": "薮兔",
+    "englishName": "Scrub Hare",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 5.37,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "栗色"
+      ],
+      "rare": [
+        "浅灰色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "white-tailed-jackrabbit",
+    "name": "白尾兔",
+    "englishName": "White-tailed Jackrabbit",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 6.33,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "米色",
+        "灰色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "莱顿湖区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "woolly-hare",
+    "name": "高原兔",
+    "englishName": "Woolly Hare",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 3.28,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "浅褐色",
+        "浅灰色",
+        "杂色中"
+      ],
+      "rare": [
+        "白化",
+        "白色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "桑达帕坦狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "canada-goose",
+    "name": "黑额黑雁",
+    "englishName": "Canada Goose",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 8.59,
+    "furTypeIds": {
+      "common": [
+        "棕色混种",
+        "灰褐色"
+      ],
+      "rare": [
+        "灰色",
+        "无毛亚种",
+        "浅灰色亚种",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区",
+      "育空河谷自然保护区",
+      "雷文图里海岸",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "黑额黑雁诱捕道具",
+      "黑额黑雁短簧片仿生哨"
+    ]
+  },
+  {
+    "id": "cinnamon-teal",
+    "name": "桂红水鸭",
+    "englishName": "Cinnamon Teal",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 4.62,
+    "furTypeIds": {
+      "common": [
+        "肉桂色",
+        "红色",
+        "花斑"
+      ],
+      "rare": [
+        "米色",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "费南多自然公园",
+      "秘鲁狩猎保护区"
+    ],
+    "lureIds": [
+      "桂红水鸭诱捕道具",
+      "信标豪华鸭类仿生哨"
+    ]
+  },
+  {
+    "id": "eurasian-teal",
+    "name": "绿翅鸭",
+    "englishName": "Eurasian Teal",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 354,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "深绿色",
+        "浅绿色"
+      ],
+      "rare": [
+        "蓝色混种",
+        "绿色混种",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸",
+      "萨尔茨维森公园"
+    ],
+    "lureIds": [
+      "绿翅鸭诱捕道具",
+      "信标豪华绿翅鸭仿生哨"
+    ]
+  },
+  {
+    "id": "eurasian-wigeon",
+    "name": "赤颈鸭",
+    "englishName": "Eurasian Wigeon",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 905,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "褐色"
+      ],
+      "rare": [
+        "深色",
+        "晦暗",
+        "混种",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "乌尔霍加热带稀树草原",
+      "雷文图里海岸",
+      "萨尔茨维森公园",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": [
+      "赤颈鸭诱捕道具",
+      "信标豪华赤颈鸭仿生哨"
+    ]
+  },
+  {
+    "id": "goldeneye",
+    "name": "鹊鸭",
+    "englishName": "Goldeneye",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 1230,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "黑色"
+      ],
+      "rare": [
+        "深色",
+        "晦暗",
+        "混种",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸",
+      "新英格兰山脉",
+      "萨尔茨维森公园"
+    ],
+    "lureIds": [
+      "鹊鸭诱捕道具",
+      "信标豪华鸭类仿生哨"
+    ]
+  },
+  {
+    "id": "green-winged-teal",
+    "name": "美洲小水鸭",
+    "englishName": "Green Winged Teal",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 480,
+    "furTypeIds": {
+      "common": [
+        "浅绿色"
+      ],
+      "rare": [
+        "白化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "密西西比阿克里斯保护区",
+      "新英格兰山脉"
+    ],
+    "lureIds": [
+      "美洲小水鸭诱捕道具",
+      "信标豪华鸭类仿生哨"
+    ]
+  },
+  {
+    "id": "greylag-goose",
+    "name": "灰雁",
+    "englishName": "Greylag Goose",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 3.85,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色"
+      ],
+      "rare": [
+        "混种",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸",
+      "桑达帕坦狩猎保护区",
+      "萨尔茨维森公园"
+    ],
+    "lureIds": [
+      "灰雁诱捕道具",
+      "信标豪华灰雁仿生哨"
+    ]
+  },
+  {
+    "id": "harlequin-duck",
+    "name": "丑鸭",
+    "englishName": "Harlequin Duck",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 7.23,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "深灰色",
+        "花斑"
+      ],
+      "rare": [
+        "深色",
+        "灰色",
+        "黑化",
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "育空河谷自然保护区"
+    ],
+    "lureIds": [
+      "丑鸭诱捕道具",
+      "信标豪华鸭类仿生哨"
+    ]
+  },
+  {
+    "id": "magpie-goose",
+    "name": "鹊雁",
+    "englishName": "Magpie Goose",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 3.02,
+    "furTypeIds": {
+      "common": [
+        "黄色",
+        "橙色",
+        "栗色"
+      ],
+      "rare": [
+        "黑化",
+        "白色亚种",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": [
+      "鹊雁诱捕道具",
+      "鹊雁仿生哨"
+    ]
+  },
+  {
+    "id": "mallard",
+    "name": "绿头鸭",
+    "englishName": "Mallard",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 19.62,
+    "furTypeIds": {
+      "common": [
+        "黑棕色",
+        "棕色混种",
+        "花斑"
+      ],
+      "rare": [
+        "亚麻色",
+        "白色亚种",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "莱顿湖区",
+      "蒂阿拉罗瓦国家公园",
+      "雷文图里海岸",
+      "新英格兰山脉",
+      "萨尔茨维森公园",
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "绿头鸭诱捕道具",
+      "信标豪华鸭类仿生哨"
+    ]
+  },
+  {
+    "id": "tufted-duck",
+    "name": "凤头潜鸭",
+    "englishName": "Tufted Duck",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 963,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "黑色"
+      ],
+      "rare": [
+        "米黄色",
+        "晦暗",
+        "白化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸",
+      "萨尔茨维森公园"
+    ],
+    "lureIds": [
+      "凤头潜鸭诱捕道具",
+      "信标豪华鸭类仿生哨"
+    ]
+  },
+  {
+    "id": "ferruginous-duck",
+    "name": "白眼潜鸭",
+    "englishName": "Ferruginous Duck",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 1050,
+    "furTypeIds": {
+      "common": [
+        "红棕色",
+        "深棕色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "萨尔茨维森公园"
+    ],
+    "lureIds": [
+      "白眼潜鸭诱捕道具",
+      "信标豪华鸭类仿生哨"
+    ]
+  },
+  {
+    "id": "gadwall",
+    "name": "赤膀鸭",
+    "englishName": "Gadwall",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 1050,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色",
+        "晦暗"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "萨尔茨维森公园"
+    ],
+    "lureIds": [
+      "赤膀鸭诱捕道具",
+      "赤膀鸭仿生哨"
+    ]
+  },
+  {
+    "id": "tundra-bean-goose",
+    "name": "冻原豆雁",
+    "englishName": "Tundra Bean Goose",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 3.16,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "深灰色",
+        "浅灰色"
+      ],
+      "rare": [
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸",
+      "萨尔茨维森公园"
+    ],
+    "lureIds": [
+      "寒林豆雁诱捕道具",
+      "信标豪华寒林豆雁仿生哨"
+    ]
+  },
+  {
+    "id": "black-grouse",
+    "name": "黑琴鸡",
+    "englishName": "Black Grouse",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 120,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "深色"
+      ],
+      "rare": [
+        "金色",
+        "橙色",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸",
+      "萨尔茨维森公园",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "bobwhite-quail",
+    "name": "山齿鹑",
+    "englishName": "Bobwhite Quail",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 238,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "红棕色",
+        "灰色"
+      ],
+      "rare": [
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "密西西比阿克里斯保护区",
+      "新英格兰山脉"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "eastern-wild-turkey",
+    "name": "东部野生火鸡",
+    "englishName": "Eastern Wild Turkey",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 4.62,
+    "furTypeIds": {
+      "common": [
+        "青铜色",
+        "褐色",
+        "浅青铜色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "密西西比阿克里斯保护区",
+      "新英格兰山脉"
+    ],
+    "lureIds": [
+      "野生火鸡乌鸦口哨",
+      "野生火鸡口哨"
+    ]
+  },
+  {
+    "id": "hazel-grouse",
+    "name": "花尾榛鸡",
+    "englishName": "Hazel Grouse",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 435,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "黄褐色",
+        "浅褐色",
+        "灰色",
+        "深色♂"
+      ],
+      "rare": [
+        "浅色",
+        "混种",
+        "深色♀"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸"
+    ],
+    "lureIds": [
+      "花尾榛鸡仿生哨"
+    ]
+  },
+  {
+    "id": "merriam-turkey",
+    "name": "大平原火鸡",
+    "englishName": "Merriam Turkey",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 4.62,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "深棕色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "莱顿湖区",
+      "银岭峰",
+      "蒂阿拉罗瓦国家公园"
+    ],
+    "lureIds": [
+      "野生火鸡乌鸦口哨",
+      "野生火鸡口哨"
+    ]
+  },
+  {
+    "id": "ring-necked-pheasant",
+    "name": "环颈雉鸡",
+    "englishName": "Ring-Necked Pheasant",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 20.29,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "白棕色",
+        "杂色中",
+        "灰色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": [
+        "珍稀珍珠纹",
+        "珍稀翡翠纹",
+        "珍稀石榴石纹",
+        "珍稀铯绿柱石纹",
+        "珍稀黄水晶纹",
+        "珍稀黑曜石纹",
+        "珍稀红宝石纹",
+        "珍稀蓝宝石纹"
+      ]
+    },
+    "mapIds": [
+      "赫希费尔登狩猎保护区",
+      "夸特罗科利纳斯野生动物保护区",
+      "阿罗约牧场",
+      "新英格兰山脉",
+      "萨尔茨维森公园",
+      "阿斯基岭狩猎保护区",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "rio-grande-turkey",
+    "name": "格兰德火鸡",
+    "englishName": "Rio Grande Turkey",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 4.62,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "黄褐色",
+        "浅黄色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿罗约牧场"
+    ],
+    "lureIds": [
+      "野生火鸡乌鸦口哨",
+      "野生火鸡口哨"
+    ]
+  },
+  {
+    "id": "rock-ptarmigan",
+    "name": "岩雷鸟",
+    "englishName": "Rock Ptarmigan",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 709,
+    "furTypeIds": {
+      "common": [
+        "杂色",
+        "双色",
+        "杂色中"
+      ],
+      "rare": [
+        "白色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "stubble-quail",
+    "name": "澳洲鹌鹑",
+    "englishName": "Stubble Quail",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 126,
+    "furTypeIds": {
+      "common": [
+        "灰色",
+        "褐色",
+        "灰褐色"
+      ],
+      "rare": [
+        "深棕色♂",
+        "白化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "澳大利亚翡翠海岸"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "western-capercaillie",
+    "name": "西方松鸡",
+    "englishName": "Western Capercaillie",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 4.64,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "黄褐色",
+        "明亮",
+        "深色"
+      ],
+      "rare": [
+        "浅色",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "梅德韦泰嘉国家公园",
+      "雷文图里海岸",
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "willow-ptarmigan",
+    "name": "柳雷鸟",
+    "englishName": "Willow Ptarmigan",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 772,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "双色",
+        "杂色中"
+      ],
+      "rare": [
+        "红色",
+        "白色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "雷文图里海岸"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "red-grouse",
+    "name": "红松鸡",
+    "englishName": "Red Grouse",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 72.75,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "浅褐色",
+        "红色",
+        "深红色"
+      ],
+      "rare": [
+        "花斑♀",
+        "白色亚种♀",
+        "白化♂",
+        "黑化♂"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "wood-duck",
+    "name": "林鸳鸯",
+    "englishName": "Wood Duck",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 670,
+    "furTypeIds": {
+      "common": [
+        "标准",
+        "深色"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种",
+        "花斑",
+        "浅银色",
+        "红化金"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "林鸳鸯诱捕道具",
+      "林鸳鸯仿生哨"
+    ]
+  },
+  {
+    "id": "dusky-grouse",
+    "name": "蓝镰翅鸡",
+    "englishName": "Dusky Grouse",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 151,
+    "furTypeIds": {
+      "common": [
+        "灰褐色",
+        "灰白色",
+        "褐色",
+        "杂色中"
+      ],
+      "rare": [
+        "白化",
+        "黑化",
+        "白色亚种"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "northern-pintail",
+    "name": "针尾鸭",
+    "englishName": "Northern Pintail",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 1040,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "明亮",
+        "灰色",
+        "晦暗"
+      ],
+      "rare": [
+        "红色",
+        "白化",
+        "白色亚种",
+        "黑化",
+        "花斑"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "针尾鸭诱捕道具",
+      "针尾鸭仿生哨"
+    ]
+  },
+  {
+    "id": "snow-goose",
+    "name": "雪雁",
+    "englishName": "Snow Goose",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 3.85,
+    "furTypeIds": {
+      "common": [],
+      "rare": [
+        "白化",
+        "黑化",
+        "混种",
+        "蓝化",
+        "中间变色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "阿斯基岭狩猎保护区"
+    ],
+    "lureIds": [
+      "雪雁诱捕道具",
+      "雪雁仿生哨"
+    ]
+  },
+  {
+    "id": "eurasian-woodcock",
+    "name": "欧亚丘鹬",
+    "englishName": "Eurasian Woodcock",
+    "level": 1,
+    "difficulty": "3 - 非常简单",
+    "drinkTime": [],
+    "diamondScore": 41.03,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "灰色"
+      ],
+      "rare": [
+        "深棕色",
+        "白色亚种",
+        "白化",
+        "黑化"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "eurasian-pine-marten",
+    "name": "欧亚松貂",
+    "englishName": "Eurasian Pine Marten",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 208,
+    "furTypeIds": {
+      "common": [
+        "褐色",
+        "黑色",
+        "浅褐色"
+      ],
+      "rare": [
+        "白化",
+        "白色亚种",
+        "黑化",
+        "花斑",
+        "茶色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  },
+  {
+    "id": "american-mink",
+    "name": "美洲水貂",
+    "englishName": "American Mink",
+    "level": 1,
+    "difficulty": "5 - 中等",
+    "drinkTime": [],
+    "diamondScore": 151,
+    "furTypeIds": {
+      "common": [
+        "深棕色",
+        "栗色"
+      ],
+      "rare": [
+        "银色",
+        "白化",
+        "白色亚种",
+        "黑化",
+        "花斑",
+        "黑色"
+      ],
+      "precious": []
+    },
+    "mapIds": [
+      "精灵之丘狩猎庄园"
+    ],
+    "lureIds": []
+  }
+]

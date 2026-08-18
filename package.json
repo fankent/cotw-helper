@@ -1,0 +1,16 @@
+{
+  "name": "cotw-helper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "《猎人：荒野的召唤》动物资料查询站 - 数据源规范化：类型 + 校验 + 构建",
+  "scripts": {
+    "analyze": "node scripts/analyze.cjs",
+    "migrate": "node scripts/migrate.cjs",
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "npm run validate && npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

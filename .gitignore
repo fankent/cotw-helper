@@ -1,0 +1,15 @@
+# 依赖目录（未来如安装依赖时忽略）
+node_modules/
+
+# 编辑器/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 验证用临时文件
+.verify/
