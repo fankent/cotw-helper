@@ -1,0 +1,15 @@
+{
+    "name": "伊比利亚狼",
+    "englishName": "Iberian Wolf",
+    "level": 6,
+    "difficulty": "9 - 传奇",
+    "drinkTime": "",
+    "diamondScore": 39,
+    "furTypes": {
+        "common": [ ],
+        "rare": [ ],
+        "precious": [ ]
+    },
+    "maps": [ "夸特罗科利纳斯" ],
+    "lures": [ ]
+}
